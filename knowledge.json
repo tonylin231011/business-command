@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "C001",
+      "title": "Managed by Q，决策2015-07，案例2016",
+      "level": "A",
+      "topic": "深耕城市、跨城还是加品类？",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/managed-q",
+      "body": "事实：2015年7月，公司已有纽约、芝加哥、旧金山业务，创始人在现有市场获客、新市场扩张与增加服务间选择。公司同时重视员工投入和技术。案例正文第1—4页提供决策与服务背景。\n\n正文：https://mitsloan.mit.edu/sites/default/files/2024-04/Managed%20by%20Q.pdf\n\n题卡：①只选一个优先增长方向，理由是什么？②你最需要哪两项单位经济性证据？③怎样设置一个不损害现有履约的小试验？\n\n边界：未给可靠CAC、客户留存或跨城固定成本，不能虚构回收期。迁移：取送车业务的城市密度与品类扩张。后续结果暂不揭晓。"
+    },
+    {
+      "id": "C002",
+      "title": "Quest Diagnostics客服中心，2015，案例2017",
+      "level": "A",
+      "topic": "合并中心后先改人员还是流程？",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/quest-diagnostics-a-improving-performance-call-centers",
+      "body": "事实：2015年新负责人接手客服业务；此前20个中心合并为两个，存在成本、缺勤、流失与服务问题。来源为官方案例摘要与正文入口。\n\n正文：https://mitsloan.mit.edu/sites/default/files/2024-04/Quest%20Diagnostics%20A.pdf\n\n题卡：①先抓哪个问题，为什么？②什么证据能区分人手不足、流程问题和技能问题？③用什么短周期指标判断行动有无副作用？\n\n边界：中心数量下降本身不能证明效率改善，也不能证明造成所有问题。需补分时来电、处理时长、一次解决率和人员数据。迁移：调度与城市运营支持。"
+    },
+    {
+      "id": "C003",
+      "title": "interviewing.io，2020冲击，案例2023",
+      "level": "A",
+      "topic": "企业招聘停滞后向哪一端收费？",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/interviewing-io-reinventing-technical-hiring",
+      "body": "事实：平台让工程师匿名练习面试，由企业为接触合格人才付费；2020年招聘冻结冲击收入。官方页面讨论多边平台与新收入选择。\n\n正文：https://mitsloan.mit.edu/sites/default/files/2025-11/iio.final_.11.03.23_0.pdf\n\n题卡：①你会优先尝试哪种收费对象/产品？②这一选择会怎样影响另一端？③要验证哪条付费意愿假设？\n\n边界：需补展表、实际用户分层和合同条款；不把用户数量当作网络效应已经成立。迁移：司机、渠道、平台之间的补贴与收费。"
+    },
+    {
+      "id": "C004",
+      "title": "Costco，2024财年业绩",
+      "level": "A",
+      "topic": "会员费和零售业务如何共同创造价值？",
+      "url": "https://investor.costco.com/news/news-details/2024/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2024-Operating-Results/default.aspx",
+      "body": "事实：2024财年披露净销售额249,625百万美元、会员费4,828百万美元；比较年度分别为52周和53周，周期不完全相同。\n\n题卡：①会员费为什么可能影响零售定价？②还需要什么资料才能判断会员模式是否值得复制？③选一个适合/不适合会员制的本地服务并说明理由。\n\n边界：会员费收入不能直接等同会员业务净利润；两期增速需注意周数；不得依据会员费与公司利润的简单对比就宣称“全部利润来自会员”。需要续费、服务成本和客户行为证据。迁移：服务包月与订阅。"
+    },
+    {
+      "id": "C005",
+      "title": "Uber，2023全年，2024披露",
+      "level": "A",
+      "topic": "盈利改善有多少可持续？",
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2024/Uber-Announces-Results-for-Fourth-Quarter-and-Full-Year-2023/default.aspx?os=io",
+      "body": "事实：2023年营业利润1,110百万美元，归属公司净利润1,887百万美元；披露全年股权投资重估带来税前净收益约1,600百万美元。数据出自2024年发布的全年业绩。\n\n题卡：①怎样描述盈利改善而不夸大？②你会优先核实哪两项现金流/运营证据？③若要评估新城市投入，还缺什么？\n\n边界：税前重估收益不能直接从税后净利润相减得到精确经营净利润。现金流、调整后EBITDA与营业利润分别核对。迁移：平台业务的经营改善与财务口径。"
+    },
+    {
+      "id": "C006",
+      "title": "瑞幸，2023Q4，2024-02-23披露",
+      "level": "A",
+      "topic": "高增长和利润率下滑同时出现时怎样配置资源？",
+      "url": "https://investor.lkcoffee.com/news-releases/news-release-details/luckin-coffee-inc-announces-fourth-quarter-and-full-year-2023/",
+      "body": "决策信息截止：2024-02-23。身份：在该日参与经营讨论的分析负责人。下表为公司披露的季度事实，不是模拟数据；单位人民币百万元。\n\n| 指标 | 2022Q4 | 2023Q4 |\n|---|---:|---:|\n| 总净收入 | 3,695.0 | 7,065.0 |\n| 自营店收入 | 2,697.1 | 5,103.4 |\n| 自营店店面经营利润 | 581.5 | 690.4 |\n| 自营店店面经营利润率 | 21.6% | 13.5% |\n\n2023Q4自营同店销售增长13.5%。注意：同店指标、自营收入与集团总收入不是同一口径；店面利润不等于集团净利润。\n\n教学决策情景（原创假设，不声称公司当时提出过该动议）：有人建议下一季度继续大幅增加开店与获客预算，认为增长已经证明模式成功。\n\n三个问题：\n1. 给出最重要的两条经营判断，并用计算支持；分别标注事实和推断。\n2. 对增加预算，你选择全面推进、分范围推进、有限验证还是暂缓？给出依据，不能只以“数据不够”结束。\n3. 只能追加一项分析，你选什么？什么结果会改变你的决定？\n\n边界：表中不能确定降价、门店成熟度、竞争或成本各贡献多少；不能用收入增长直接推断投资回报。评分重点为口径、证据、取舍与调查区分力，回答前不提示算法。"
+    },
+    {
+      "id": "C007",
+      "title": "Amazon，1997股东信",
+      "level": "A",
+      "topic": "怎样区分长期投入与无纪律扩张？",
+      "url": "https://www.aboutamazon.com/news/company-news/amazons-original-1997-letter-to-shareholders",
+      "body": "事实：1997股东信报告销售额147.8百万美元、增长838%，并把客户重复购买、品牌与长期市场地位放在重要位置。材料是管理层对策略的说明，不是独立因果证据。\n\n题卡：①在不知道后续成功的前提下，哪些信息支持继续投入？②哪些未知会使你反对？③为一个早期项目设计资本上限与里程碑。\n\n边界：不能因为后来成功就推断当年每项投入合理。需要成本、现金消耗、竞争和留存证据。迁移：AI产品和第二曲线的小额长期试验。"
+    },
+    {
+      "id": "C008",
+      "title": "Ferrari in 2025，案例2025",
+      "level": "B",
+      "topic": "增长是否损害稀缺性，电动化如何投入？",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/ferrari-2025-balancing-tradition-and-innovation-to-grow",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C009",
+      "title": "Boeing 737 MAX，2018—2019，案例2023",
+      "level": "B",
+      "topic": "激励、信息上报与安全治理",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/boeings-737-max-8-disasters",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C010",
+      "title": "PayPal员工财务健康，案例2022",
+      "level": "B",
+      "topic": "无法精确计算NPV时如何作出人员投资决定？",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/paypal-and-financial-wellness-initiative",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C011",
+      "title": "Mud Bay，2014—2017，案例2019",
+      "level": "B",
+      "topic": "人员投入如何与运营方式配套？",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/mud-bays-good-jobs-journey",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C012",
+      "title": "Toyota供应商关系，案例2017",
+      "level": "B",
+      "topic": "供应商问题应压价、替换还是共同改善？",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/toyota-supplier-relations-fixing-suprima-chassis",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C013",
+      "title": "ESPN，案例2024",
+      "level": "B",
+      "topic": "老业务现金流与新渠道转型",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/espn-navigates-a-new-world-order",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C014",
+      "title": "Athletes Unlimited，案例2023",
+      "level": "B",
+      "topic": "新市场商业模式与多方利益",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/athletes-unlimited-innovating-professional-sports-and-empowering-players",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C015",
+      "title": "美国女足联赛NWSL，案例2021",
+      "level": "B",
+      "topic": "危机中的组织信任和增长选择",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/national-womens-soccer-league-a-navigating-uncertainty-building-future",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C016",
+      "title": "Netflix Goes to Bollywood，案例2021",
+      "level": "B",
+      "topic": "国际扩张与本地化授权",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/netflix-goes-to-bollywood",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C017",
+      "title": "Formula 1，案例2020",
+      "level": "B",
+      "topic": "内容、受众与商业化的关系",
+      "url": "https://mitsloan.mit.edu/teaching-resources-library/formula-1-unleashing-greatest-spectacle-planet",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C018",
+      "title": "SELCO，事件截止日待正文确认",
+      "level": "B",
+      "topic": "低收入客户的需求、支付能力和渠道",
+      "url": "https://som.yale.edu/case-studies/approach/sample-cases",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C019",
+      "title": "Design at Mayo，2000年代初",
+      "level": "B",
+      "topic": "服务体验如何实验验证？",
+      "url": "https://som.yale.edu/case-studies/approach/sample-cases",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C020",
+      "title": "Project M / iTEACH，2006起",
+      "level": "B",
+      "topic": "公益目标如何转为可执行服务模式？",
+      "url": "https://som.yale.edu/case-studies/approach/sample-cases",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C021",
+      "title": "Teach for All，2011场景",
+      "level": "B",
+      "topic": "跨地区复制与本地适应",
+      "url": "https://som.yale.edu/case-studies/approach/sample-cases",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C022",
+      "title": "美团，2023全年，2024披露",
+      "level": "C",
+      "topic": "平台业务增长如何落实为现金回报？",
+      "url": "https://www.meituan.com/news/NN240322064007784",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C023",
+      "title": "途虎，2023年报",
+      "level": "C",
+      "topic": "工场店网络、利润质量与车后服务协同",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2024/0425/2024042500917_c.pdf",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C024",
+      "title": "Cisco in 2026: Re-Rating and Reinvention，SM417",
+      "level": "B",
+      "topic": "成熟硬件企业如何重构增长？",
+      "url": "https://www.gsb.stanford.edu/faculty-research/publications/case-studies",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C025",
+      "title": "Savannah Informatics: When Growth Stalls，2024场景，SM420",
+      "level": "B",
+      "topic": "交易量上涨为何未必带动收入增长？",
+      "url": "https://www.gsb.stanford.edu/faculty-research/publications/case-studies",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C026",
+      "title": "Nike: Going Direct 2017—2024，SM419",
+      "level": "B",
+      "topic": "直营渠道与渠道伙伴如何取舍？",
+      "url": "https://www.gsb.stanford.edu/faculty-research/publications/case-studies",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C027",
+      "title": "The Voice of AI: Turning It Up to Eleven，E964",
+      "level": "B",
+      "topic": "AI产品付费、增长与资本需要；数值待正文核验",
+      "url": "https://www.gsb.stanford.edu/faculty-research/publications/case-studies",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C028",
+      "title": "Aging Care with Seniorly，E945",
+      "level": "B",
+      "topic": "信息平台能否解决高信任服务的匹配问题？",
+      "url": "https://www.gsb.stanford.edu/faculty-research/publications/case-studies",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C029",
+      "title": "Resonac: A Startup with 26,000 Employees，OB120",
+      "level": "B",
+      "topic": "大组织文化转型如何落地？",
+      "url": "https://www.gsb.stanford.edu/faculty-research/publications/case-studies",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    },
+    {
+      "id": "C030",
+      "title": "AMAG汽车行业转型，IMD案例入口",
+      "level": "B",
+      "topic": "经销服务企业如何应对行业变化？",
+      "url": "https://imd.org/research-knowledge/case-studies",
+      "body": "本条目已定位官方来源，需由教练补读正文后再生成训练。请勿仅凭摘要生成真实财务数据。"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "MBA-001",
+      "caseId": "C006",
+      "title": "瑞幸：增长之后，是否继续加码？",
+      "questions": [
+        "给出最重要的两条经营判断，用计算支持，并区分事实与推断。",
+        "对增加开店与获客预算，你选择全面推进、分范围推进、有限验证还是暂缓？说明依据。",
+        "只能追加一项分析，你选什么？什么结果会改变决定？"
+      ]
+    },
+    {
+      "id": "MBA-002",
+      "caseId": "C001",
+      "title": "Managed by Q，决策2015-07，案例2016",
+      "questions": [
+        "只选一个优先增长方向，说明理由。",
+        "最需要哪两项单位经济性证据？",
+        "如何设置不损害现有履约的小试验？"
+      ]
+    },
+    {
+      "id": "MBA-003",
+      "caseId": "C002",
+      "title": "Quest Diagnostics客服中心，2015，案例2017",
+      "questions": [
+        "先抓哪个问题，为什么？",
+        "什么证据能区分人手、流程和技能问题？",
+        "用什么指标判断行动的副作用？"
+      ]
+    },
+    {
+      "id": "MBA-004",
+      "caseId": "C003",
+      "title": "interviewing.io，2020冲击，案例2023",
+      "questions": [
+        "优先向哪一端收费，提供什么产品？",
+        "这一选择怎样影响另一端？",
+        "如何验证付费意愿？"
+      ]
+    },
+    {
+      "id": "MBA-005",
+      "caseId": "C004",
+      "title": "Costco，2024财年业绩",
+      "questions": [
+        "会员费如何影响零售定价？",
+        "判断模式可复制性还需要什么证据？",
+        "选择一个适合或不适合会员制的本地服务。"
+      ]
+    },
+    {
+      "id": "MBA-006",
+      "caseId": "C005",
+      "title": "Uber，2023全年，2024披露",
+      "questions": [
+        "如何描述盈利改善而不夸大？",
+        "优先核实哪些现金流和运营证据？",
+        "判断新城市投入还缺什么？"
+      ]
+    },
+    {
+      "id": "MBA-007",
+      "caseId": "C007",
+      "title": "Amazon，1997股东信",
+      "questions": [
+        "不知道后续成功时，哪些证据支持投入？",
+        "哪些未知会让你反对？",
+        "设计一个早期项目的资本上限与里程碑。"
+      ]
+    }
+  ]
+}
