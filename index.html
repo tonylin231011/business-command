@@ -1,22 +1,315 @@
-<!DOCTYPE html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>经营者 · 商业决策沙盘</title><style>
-:root{--bg:#101c1b;--panel:#1a2a28;--line:#35504b;--ink:#e8eee5;--muted:#9fb3a9;--gold:#edc77b}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,'Microsoft Yahei',sans-serif}header{padding:20px 5vw;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}a{color:var(--gold)}main{max-width:1160px;padding:40px 30px;margin:auto}.kicker{letter-spacing:3px;color:var(--gold);font-size:12px}h1{font-size:clamp(32px,5vw,60px);line-height:1.2}h2{font-size:28px}h3{font-size:20px}.muted{color:var(--muted)}button{font:inherit;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);padding:12px 20px;cursor:pointer}button:hover,button.selected{border-color:var(--gold);background:#374037}button.primary{background:var(--gold);color:#172521;font-weight:700}button:disabled{opacity:.4;cursor:not-allowed}.panel{padding:26px;border:1px solid var(--line);border-radius:14px;background:var(--panel);margin:22px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.option{text-align:left;display:block;min-height:210px}.option strong{font-size:20px;display:block;margin-bottom:12px}.option small{display:block;color:var(--muted);margin-top:16px}label{display:block;margin:16px 0}input,textarea{font:inherit;background:#0e1c19;color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:12px}input[type=number]{width:110px}textarea{width:100%;min-height:90px}.row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.timeline{display:flex;gap:12px}.timeline span{height:5px;flex:1;background:var(--line)}.timeline span.done{background:var(--gold)}.fact{border-left:2px solid var(--gold);padding-left:16px;margin:18px 0}.tag{color:var(--gold);font-size:12px}details{margin-top:20px}summary{cursor:pointer}footer{margin:40px 0;color:var(--muted);font-size:13px}table{width:100%;border-collapse:collapse}td,th{padding:12px;text-align:left;border-bottom:1px solid var(--line)}@media(max-width:760px){main{padding:25px 18px}.grid{grid-template-columns:1fr}.option{min-height:auto}table{font-size:13px}}
-</style><header><strong>经营者 / BUSINESS COMMAND</strong><nav><a href="library.html">进入案例与学习档案 ↗</a>　<button onclick="exportAll()">导出战绩</button></nav></header><main id="app"></main><script>
-const E={"id": "STR-0001", "version": 2, "title": "千团大战 · 活到下一轮", "subtitle": "2011 / 中国本地生活 / 三幕历史决策沙盘", "role": "你受命进入美团的经营决策席。你承担类似王兴的资源取舍职责；以下决策菜单为编辑设计，不是当年会议实录。", "sources": [{"id": "S1", "date": "2011-03-14", "title": "北京商报：过期包退计划（同期报道）", "url": "https://finance.ifeng.com/news/special/2011315/20110314/3655793.shtml"}, {"id": "S2", "date": "2011-07-07", "title": "新浪科技：B轮融资发布会（同期采访）", "url": "https://tech.sina.com.cn/i/2011-07-07/11005745178.shtml"}, {"id": "S3", "date": "2011-07-07", "title": "经济观察网：融资与广告策略（同期采访）", "url": "https://www.eeo.com.cn/2011/0707/205540.shtml"}, {"id": "S4", "date": "2011-11-11", "title": "新浪科技：IPO延迟（消息来源含匿名人士，原因未获独立证实）", "url": "https://tech.sina.com.cn/i/2011-11-11/09216306701.shtml"}, {"id": "S5", "date": "2012-06-21", "title": "北京青年报：拉手6月19日撤销申请", "url": "https://msn.finance.sina.com.cn/gdxw/20120621/0000998863.html"}, {"id": "S6", "date": "2014-02-21", "title": "王兴十年（回顾性人物报道，清华校友总会转载）", "url": "https://www.tsinghua.org.cn/info/1014/11230.htm"}], "scenes": [{"date": "2011-03-14", "title": "第一幕：信任的代价", "dispatch": "一份退款公告放在桌上。行业习惯将未消费的过期券留在平台。你的团队已经宣布返还这部分余额。增长团队仍在争取投入，财务需要知道你接下来优先守住什么。", "facts": ["美团已宣布过期包退，涉及此前未消费款项1000余万元人民币。[S1]", "本幕不提供真实现金余额、净烧钱速度或现金跑道；公开材料不足。"], "sourceIds": ["S1"], "question": "既定退款承诺已经存在，下一阶段你把哪个目标放在首位？", "options": [{"id": "growth", "name": "扩大触达", "text": "优先新增用户与城市触达；接受短期获客支出压力。", "tradeoff": "需要证明新增客户能留下来，并核对现金支出。"}, {"id": "trust", "name": "兑现服务", "text": "优先退款兑现、客户解释与商户交付；限制同期新增项目。", "tradeoff": "服务改善未必立刻带来规模，机会窗口也会收窄。"}, {"id": "reserve", "name": "保留选择", "text": "优先现金盘点、收支预测与储备；分阶段批准新增投入。", "tradeoff": "等待信息也有成本，谨慎可能错过优质商户。"}], "budgetLabel": "用100枚教学资源筹码表达本幕投入强度（不是公司真实现金）", "prediction": "在2011年7月底之前，美团是否会宣布完成新一轮融资？", "outcome": true, "resolution": "2011年7月7日，发布会宣布B轮5000万美元到账。[S2]", "history": "过期退款是本幕开始前已经公布的承诺，不是你选择后才发生。资料不足以还原当时所有预算讨论。", "backdrop": ["先理解生意：消费者先在线付款，再拿团购券去线下商户消费。平台把用户和商户连起来，收到钱与完成服务之间有时间差。", "你面对的不只是获客竞争。用户担心券买了不能用，商户担心客人来了、款却结不到。看起来同样是账上的钱，有的是资本，有的背后还挂着履约义务。", "本幕用“退款公告已经发出”作为起点。你不能撤回既定承诺来获得一个轻松答案。现在要决定的是：如何让承诺在资源分配里真正有位置。"], "reveal": {"actual": "美团已推出过期退款，并非只用低价吸引用户。[S1] 你的任务是在这个已发生的选择之上安排后续优先级，而不是重新决定退款政策。", "why": "经营分析：它放弃了一部分沉淀款带来的短期便利，换取对承诺可兑现的信任。关键区别是，把用户愿意第一次付款，和用户愿意长期相信平台，视作两个问题。该机制合理，但本幕没有实验数据证明退款单独带来了多少增长。", "insight": "原来，现金纪律不等于所有现金都攥住。属于用户承诺的款项被留住，账面可能更好看，经营信用却可能受损。", "feedback": {"growth": "你优先解决“更多人来”，但此刻要防的缺口是“来了以后是否兑现”。若新增用户走进同样的退款与交付问题，增长会放大问题。检查你的触发器是否包含履约或复购，而不只是拉新量。", "trust": "你把承诺兑现放到了前面，识别了信任约束。但“重视服务”仍不等于划算：你需要跟踪退款兑现、复购与交付成本，不能把任何服务支出都自动解释为长期投入。", "reserve": "你保留了机动空间，但需要区分自由资金与承诺款。若储备依赖延后兑现已承诺退款，它保住的可能只是账面；若先足额保障义务再限新增项目，则更能自洽。"}, "compare": ["扩大触达：在履约可靠时可能有效；这里需证明不会把未解决的服务问题规模化。", "兑现服务：与已公布方向一致，但必须检查效果，不能据历史方向认定所有投入都合理。", "保留选择：防止失血有价值；要先划清退款与结算义务，不能冻结所有经营动作。"], "bridge": "先把本幕的判断消化，再把日历翻到7月。下一幕新增融资消息；它是历史进程，不是系统奖励你的选择。", "ids": ["S1"]}}, {"date": "2011-07-07", "title": "第二幕：钱到了，仗怎么打", "dispatch": "新一轮融资已宣布完成。各条战线都在申请资源。这一刻，融资额是已知，下一轮融资是否容易仍是未知。请给出你愿意承担的投入节奏。", "facts": ["B轮融资5000万美元已到账；同期报道转述首轮资金尚未使用。[S2]", "截至5月底，开站接近100城，员工1800多人，均为当时公司披露口径。[S2]", "融资金额不是可自由支配现金余额，缺少商户结算、退款义务和净流出数据。"], "sourceIds": ["S2"], "question": "面对扩张需求，你选择哪条主路线？", "options": [{"id": "ads", "name": "集中买曝光", "text": "把新增投入集中于品牌与广告触达，争取先形成用户规模。", "tradeoff": "需要持续监测获客成本和复购，防止流量未转成经营贡献。"}, {"id": "service", "name": "经营能力优先", "text": "把新增投入放在服务、技术和人才，按城市表现逐步追加。", "tradeoff": "建设周期较长，对手可能先抢走显眼位置。"}, {"id": "cash", "name": "延长储备", "text": "降低新增承诺，先守结算和退款能力，再等待行业变化。", "tradeoff": "现金更充裕，但竞争位置也可能下降。"}], "budgetLabel": "本幕教学投入强度：0—100枚筹码（各幕独立，不模拟历史财务）", "prediction": "未来12个月内，拉手网会完成赴美IPO挂牌吗？", "outcome": false, "resolution": "2012年6月报道：拉手已于6月19日撤销上市申请。[S5]", "history": "同期采访报道美团不准备加入广告烧钱战；发布会列出的资金用途包括服务、技术、人才。[S2/S3] 这是主张与方向证据，不足以证明这些选择单独导致胜出。", "backdrop": ["融资新闻让团队暂时松了一口气，但增长申请并不会自动分出先后。新增城市、购买曝光、做产品与培训销售，都会争夺这笔钱。", "同样增加一笔销售额，可能来自一次性的折扣，也可能来自复购；同样一枚筹码，可能买来短暂流量，也可能形成组织能力。没有成本和留存数据，就不能只看表面热闹。", "你的任务不是预测美团最终会不会赢，而是在未知未来中给出投入节奏。你有资金，但不知道未来融资窗口能开多久。"], "reveal": {"actual": "美团当时公开表达不加入广告烧钱战，同时把服务、技术与人才列入资金用途。[S2/S3] 这是投入方式的取舍，不是停止获客。", "why": "经营分析：品牌曝光是否带来可留存、可盈利的需求，需要额外证据；资金既可用于追逐当期规模，也可保留以后行动的余地。真正该比较的是不同渠道的增量获客成本、复购和现金回收，而非“打广告/不打广告”的道德高下。", "insight": "原来，拿到钱之后最难的并不是敢不敢花，而是能否拒绝用对手的支出节奏替自己做预算。", "feedback": {"ads": "你的方案押注曝光能沉淀为客户资产。若只有新增用户、没有留存和贡献的验证，逻辑中缺了一环：买来注意力之后，谁为持续服务买单？这是一项待验证假设，不能仅凭后来历史给你判错。", "service": "你选择了与公开方向接近的投入，但仍需防止“能力建设”成为无法验证的口袋。应给出投入里程碑、期限与经营指标，而不是因为选中了历史方向就通过。", "cash": "你识别了融资不确定性。但把现金都保留下来，也可能错过经营建设。应说清保留资金覆盖什么义务、哪类项目仍可小额推进；防守不必等于全面停摆。"}, "compare": ["集中买曝光：可能占据心智，代价是回收不确定；需要渠道与复购验证。", "经营能力优先：可能改善长期效率，代价是见效慢；需要里程碑与停止线。", "延长储备：降低断粮风险，代价是错失部分增长；需要明确最低储备与可批准的投入。"], "bridge": "广告选择的机制已经摊开。现在进入11月：新情报只揭示IPO推迟，不提前告诉你最终结局。上一项事件预测仍留到终局结算。", "ids": ["S2", "S3"]}}, {"date": "2011-11-11", "title": "第三幕：寒意先到", "dispatch": "关于拉手IPO推迟的消息传到经营席。注意，它还没有被正式撤回。你的决定必须适用于“对手很快重启”与“窗口长期关闭”两种情景。", "facts": ["当日媒体报道拉手暂停路演并推迟IPO，仍有重启可能。[S4]", "报道含匿名消息，关于会计问题及举报原因的说法不能视为已定论。[S4]", "没有可靠证据证明某个核心城市出现补贴翻倍或商户独家买断，本局不加入这些桥段。"], "sourceIds": ["S4"], "question": "你如何把融资风险转化为下一阶段的行动？", "options": [{"id": "expand", "name": "加速抢位", "text": "趁对手不确定，争取商户与人才；设定投入上限和停止条件。", "tradeoff": "机会可能短暂，也可能把自己拖入不可逆支出。"}, {"id": "hold", "name": "守住经营", "text": "优先结算、退款与履约，放慢新增城市，保留机动资金。", "tradeoff": "更能承受坏情景，也可能让出份额。"}, {"id": "org", "name": "补齐组织", "text": "把优先级交给区域管理、销售质量与流程，扩张按能力放行。", "tradeoff": "组织投入见效慢，需要承担管理变革成本。"}], "budgetLabel": "本幕教学投入强度：0—100枚筹码", "prediction": null, "history": "回顾性报道记载：干嘉伟于2011年11月16日加入，随后调整区域管理体系。[S6] 这是事后资料，不能提前作为本幕情报。公开材料不足以确认当时是否正式比较过菜单中的所有方案。", "backdrop": ["对手的IPO出了变数。它可以被理解为抢位窗口，也可以是整个行业融资环境变差的警报。这两种解释会导向不同的行动。", "保留现金只是争取了时间。如果组织无法把资金转成稳定的商户供给和交付，等来的机会也未必接得住；反过来，没有现金约束的扩张也可能加速失血。", "这一幕要求你把战略落实到组织和节奏。不要提前把“上市推迟”当作竞争对手已经出局。"], "reveal": {"actual": "事后人物报道记载，干嘉伟于11月16日加入，并将区域管理从两个大区调整为八个。[S6，回顾性来源] 这是组织建设的实际动作，不能据此断言当时所有其他投入都停止了。", "why": "经营分析：扩大覆盖会增加信息传递、培训和质量控制的负担。增加管理层级的目的应是让区域经营有人负责、异常能被发现和纠正，而不是为层级本身付费。组织建设与机会性扩张可以互补，关键在承载能力和投入边界。", "insight": "原来，活过寒冬只是资格；能否接住机会，还取决于组织是否能把分散城市变成可管理的经营网络。", "feedback": {"expand": "你看到了窗口，但要检查能否承载。现金尚在、对手遇阻，都不等于新增城市会成功；若没有区域负责人、供给质量与单位经济性的门槛，窗口可能变成失控扩张的借口。", "hold": "你防范了外部风险，却要检查是否把融资不确定性等同于所有建设都应该推迟。即使放慢城市扩张，也可以改善现有区域管理，否则只是延长同一套低效系统的寿命。", "org": "你找到了组织约束，与报道中的动作接近。但不能把增加大区数量当作成功原因本身。需要明确谁负责、信息怎样上行、经营异常怎样处理，再验证这些改变是否改善交付。"}, "compare": ["加速抢位：抓机会有道理，须有承载能力门槛，不能把对手困难当作自己的能力。", "守住经营：防止失血有道理，但不应自动排除提升效率的建设。", "补齐组织：有实际动作证据支持；效果仍需数据验证，不能把历史重合当作因果证明。"], "bridge": "三次命令已经封存。下一步结算事件预测，并把你每幕选择中的关键假设汇总成一份可以带走的复盘。", "ids": ["S6"]}}], "debrief": "本局不是平行宇宙收益预测。你的选择会留下不同的资源与风险承诺，下一幕仍按真实历史时间推进。未建模的利润与市占率不会凭选择生成。训练目标：把现金义务、投入强度、证据限制和行动触发器连成决策。", "transfer": "映射到区域运营：司机供给、商户交付、补贴拉量与城市扩张争夺同一份资源。写出一个你现在业务里可以用明确停止线约束的小额试验。"};const KEY='business-command-v2';let state;try{state=JSON.parse(localStorage.getItem(KEY))||{runs:[],active:null}}catch{state={runs:[],active:null}}let choice=null,entered=Date.now();const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{alert('保存失败，请立即导出战绩')}}
-function exportAll(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({schemaVersion:2,episode:E.id,...state},null,2)],{type:'application/json'}));a.download='商业沙盘战绩.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)}
-function restore(file){if(!file)return;file.text().then(t=>{let d=JSON.parse(t);if(d.schemaVersion!==2||!Array.isArray(d.runs)||d.episode!==E.id)throw Error('格式不匹配');if(d.active&&(!Array.isArray(d.active.decisions)||d.active.decisions.length>3))throw Error('进度无效');if(confirm('恢复将覆盖本机沙盘战绩，请先导出。继续？')){state={runs:d.runs,active:d.active};save();render()}}).catch(e=>alert('恢复失败：'+e.message))}
-function begin(){state.active={id:Date.now().toString(),episode:E.id,version:E.version,startedAt:new Date().toISOString(),decisions:[]};choice=null;entered=Date.now();save();render()}
-function home(){document.getElementById('app').innerHTML=`<div class="kicker">沉浸式商业案例 · 首集体验版</div><h1>经营者，<br>这一次由你拍板。</h1><p class="muted">封存未来的信息，进入真实的商业关口。选择路线、承诺资源、押上判断，然后对照历史。</p><div class="panel"><span class="tag">STR-0001 · 战略 / 运营 / 资本</span><h2>千团大战 · 活到下一轮</h2><p>2011年，团购行业拥挤而躁动。你坐进美团经营决策席。新钱、退款承诺与销售组织，将三次考验你的选择。</p><div class="row"><button class="primary" onclick="begin()">接受任命 →</button>${state.active?'<button onclick="render()">继续本局</button>':''}</div><p class="muted">约15—20分钟 / 三幕逐幕讲评 / 两项可结算预测 / 无倒计时强迫</p></div><div class="grid"><div class="panel"><span class="tag">01 / 已可体验</span><h3>千团大战</h3><p>资金、信任与组织如何排兵布阵。</p></div><div class="panel"><span class="tag">02 / 待核验</span><h3>Managed by Q</h3><p>扩城市、加品类还是做密度？待补完整历史结果后开放。</p></div><div class="panel"><span class="tag">03 / 待核验</span><h3>平台收入的第二条路</h3><p>招聘冻结时，向哪端收费？不以虚构结局凑集数。</p></div></div><details><summary>恢复沙盘备份</summary><input aria-label="恢复沙盘备份" type="file" accept=".json" onchange="restore(this.files[0])"></details><footer>这是一集体验版，尚未按“三集齐备”标准开启日更。网页只将未来信息从正常流程隐藏，静态源码无法防止主动查看剧透。记录保存在当前浏览器，须导出备份。</footer>`}
-function render(){let r=state.active;if(!r)return home();if(r.pendingReview!==undefined&&r.pendingReview!==null)return revealScene(r.pendingReview);let i=r.decisions.length;if(i===E.scenes.length)return report();let s=E.scenes[i];choice=null;entered=Date.now();document.getElementById('app').innerHTML=`<div class="row"><button onclick="home()">← 指挥席</button><span class="kicker">${E.id} / ${s.date} / 情报截止此刻</span></div><h1>${s.title}</h1><div class="timeline">${E.scenes.map((_,n)=>`<span class="${n<=i?'done':''}"></span>`).join('')}</div><p class="muted">${i===0?E.role:'真实进程继续推进。你的上一幕选择已封存；本幕不会假装是它造成了历史事件。'}</p><div class="panel"><div class="tag">情报室 / 本幕新增</div><p>${s.dispatch}</p>${s.facts.map(f=>`<div class="fact">${esc(f)}</div>`).join('')}<details><summary>本幕来源与证据</summary>${E.sources.filter(x=>s.sourceIds.includes(x.id)).map(x=>`<p>[${x.id}] ${x.date} <a target="_blank" rel="noopener" href="${x.url}">${x.title}</a></p>`).join('')}</details></div><div class="panel"><div class="tag">进入现场 / 经营情境解释</div>${s.backdrop.map(t=>`<p>${t}</p>`).join('')}</div><h2>${s.question}</h2><p class="muted">选项是基于真实经营矛盾设计的教学备选，不声称是当年内部会议提案。</p><div class="grid">${s.options.map((o,n)=>`<button class="option" id="option${n}" onclick="pick(${n})"><strong>${o.name}</strong>${o.text}<small>承担的代价：${o.tradeoff}</small></button>`).join('')}</div><form onsubmit="commit(event)"><div class="panel"><label>${s.budgetLabel}<br><input id="budget" aria-label="教学投入强度" type="number" min="0" max="100" step="1" required placeholder="0—100"></label><label>你的停止条件 / 什么证据会让你改变主意？<textarea id="reason" required minlength="8" placeholder="写一条具体的行动触发器……"></textarea></label>${s.prediction?`<div class="tag">单独押注 / 历史可结算事件</div><p>${s.prediction}</p><label>你认为“会发生”的概率（不是对路线的信心） <input id="prob" type="number" min="0" max="100" required placeholder="0—100"> %</label>`:'<p class="muted">本幕路线没有可验证的二元成败标签，不计算置信度得分。</p>'}</div><button id="commit" class="primary" type="submit" disabled>封存决策，揭晓本幕 →</button></form><footer>筹码是教学表达，不是历史金额；选择不触发伪造的市场份额或利润。自由文本保留给教练评价。</footer>`}
-function pick(n){choice=n;document.querySelectorAll('.option').forEach((e,k)=>e.classList.toggle('selected',k===n));document.getElementById('commit').disabled=false}
-function commit(ev){ev.preventDefault();if(choice===null)return;let r=state.active,s=E.scenes[r.decisions.length],b=Number(document.getElementById('budget').value),reason=document.getElementById('reason').value.trim(),prob=s.prediction?Number(document.getElementById('prob').value):null;if(!Number.isInteger(b)||b<0||b>100||reason.length<8||prob!==null&&(!Number.isFinite(prob)||prob<0||prob>100))return alert('请核对投入、条件与概率');r.decisions.push({scene:r.decisions.length,option:s.options[choice].id,budget:b,reason,probability:prob,elapsedMs:Date.now()-entered,at:new Date().toISOString()});r.pendingReview=r.decisions.length-1;save();render();window.scrollTo(0,0)}
-
-function diagnosis(i,d){let rev=E.scenes[i].reveal;return rev.feedback[d.option]||'旧版本选项：请参考本幕历史与路线比较。'}
-function revealScene(i){let s=E.scenes[i],d=state.active.decisions[i],rv=s.reveal,o=s.options.find(o=>o.id===d.option);document.getElementById('app').innerHTML=`<div class="kicker">本幕揭晓 / ${s.date} / 暂停推进</div><h1>先别翻页。<br>看清这一步的取舍。</h1><div class="panel"><span class="tag">你的决策已封存</span><h2>${esc(o?.name||d.option)}</h2><p>教学投入 ${d.budget}/100</p><p>你的改变条件：${esc(d.reason)}</p></div><div class="panel"><span class="tag">01 / 当事人实际做了什么</span><h2>${s.title}</h2><p>${rv.actual}</p></div><div class="panel"><span class="tag">02 / 为什么这样做</span><p>${rv.why}</p><div class="fact"><strong>${rv.insight}</strong></div></div><div class="panel"><span class="tag">03 / 对照你选的路线</span><p>${esc(diagnosis(i,d))}</p><p class="muted">这是基于选项的风险诊断，不是对你内心动机的认定。自由文本完整批改仍需教练。</p>${d.budget>=80?'<p>你还选择了高投入强度：请检查上面的停止条件能否在大部分资源花完前触发。</p>':d.budget<=20?'<p>你选择了低投入强度：请检查计划在这个强度下是否仍能完成承诺，而不是只表达谨慎。</p>':''}</div><div class="panel"><span class="tag">04 / 逐条比较其余路线</span>${rv.compare.map(t=>`<p>${t}</p>`).join('')}<p class="muted">以上为经营分析；不是当事人逐条否决提案的会议纪要。</p></div><details><summary>本幕证据</summary>${E.sources.filter(x=>rv.ids.includes(x.id)).map(x=>`<p>[${x.id}] <a href="${x.url}" target="_blank" rel="noopener">${x.title}</a></p>`).join('')}</details><div class="panel"><h3>这一幕，你会修正哪一个假设？</h3><textarea id="reflection" placeholder="可写：我原本假设……，现在需要先验证……">${esc(d.reflection||'')}</textarea><p>${rv.bridge}</p><button class="primary" onclick="continueScene()">${i===2?'完成复盘，打开总战报':'我已理解，继续真实进程'} →</button><p class="muted">阅读节奏由你掌握，可留空继续。不会用强制等待增加时长。</p></div>`}
-function continueScene(){let r=state.active;if(r.pendingReview===undefined||r.pendingReview===null)return;let d=r.decisions[r.pendingReview];d.reflection=document.getElementById('reflection').value.trim();d.reviewedAt=new Date().toISOString();delete r.pendingReview;save();render();window.scrollTo(0,0)}
-
-function report(){let r=state.active;let scored=r.decisions.filter(d=>d.probability!==null),loss=scored.reduce((v,d)=>v+(d.probability/100-Number(E.scenes[d.scene].outcome))**2,0)/scored.length;let pct=Math.round((1-loss)*100);document.getElementById('app').innerHTML=`<div class="kicker">AFTER ACTION REVIEW / ${E.id}</div><h1>战役结束。<br>现在，打开历史档案。</h1><div class="grid"><div class="panel"><div class="tag">预测表现</div><h2>${pct} / 100</h2><p>100 × (1 − 平均Brier损失)</p></div><div class="panel"><div class="tag">样本边界</div><h2>${scored.length} 个事件</h2><p>单局预测表现，不代表已测得稳定校准度。</p></div><div class="panel"><div class="tag">决策质量</div><h2>逐幕诊断已生成</h2><p>已按所选路线指出假设缺口；自由文本仍待教练复核。</p></div></div>${r.decisions.map((d,i)=>{let s=E.scenes[i],o=s.options.find(o=>o.id===d.option);return `<div class="panel"><span class="tag">${s.date}</span><h2>${s.title}</h2><p>你的命令：${o.name} · 教学投入 ${d.budget}/100</p><p>触发器：${esc(d.reason)}</p><p class="muted">本幕停留约${Math.round(d.elapsedMs/1000)}秒（含阅读/离开页面时间，不用于能力评分）。</p>${s.prediction?`<p>你给“发生”${d.probability}%概率；实际：${s.outcome?'发生':'未发生'}。</p><p>${s.resolution}</p>`:''}<h3>历史对照</h3><p>${s.history}</p><h3>这一选择最需要检查的假设</h3><p>${esc(diagnosis(i,d))}</p><p>你在揭晓后记录的修正：${esc(d.reflection||'未记录')}</p><p>机会与代价：${o.tradeoff}</p></div>`}).join('')}<div class="panel"><h2>把这仗带回自己的城市</h2><p>${E.transfer}</p><p class="muted">${E.debrief}</p><button onclick="downloadReview()">下载完整教练复盘包</button> <button onclick="finish()">归档战报</button></div><details><summary>史料档案 · 已解锁</summary>${E.sources.map(x=>`<p>[${x.id}] ${x.date} <a href="${x.url}" target="_blank" rel="noopener">${x.title}</a></p>`).join('')}<p>未证实并排除：14个月跑道、10城补贴翻倍、当年某核心城市独家买断。2013份额“过半”涉及具体月份与不同口径，本集不使用该数。</p></details>`}
-function downloadReview(){let text='# STR-0001 教练复盘包\n请严评我的决策依据、停止条件和资源取舍。不要因为与历史路线不同就扣分，不用后来结果证明当年必然正确。最后只留一个改进动作。两项预测Brier只算本局表现，不算稳定校准。\n'+JSON.stringify({episode:E,run:state.active},null,2);let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/markdown'}));a.download='STR-0001-复盘包.md';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)}
-function finish(){if(!state.runs.some(r=>r.id===state.active.id))state.runs.push({...state.active,finishedAt:new Date().toISOString()});state.active=null;save();home()}
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102c35"><meta name="description" content="进入2011年的经营决策席，翻阅材料、签下命令、逐幕对照历史。独立运行的个人商学院。"><title>经营者｜千团大战 · 下一笔钱</title><style>
+:root{--bg:#f1efe8;--paper:#fcfaf5;--ink:#173039;--muted:#657575;--line:#d6d8ce;--teal:#18796f;--gold:#d0a452;--dark:#102c35;--red:#a84931}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 system-ui,-apple-system,'Microsoft Yahei',sans-serif}button,input,textarea{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #cb8036;outline-offset:4px}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.35}h1,h2,.serif{font-family:'Songti SC','Noto Serif CJK SC','SimSun',serif}header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid var(--line);gap:16px}header .brand{font-size:21px;font-weight:800;letter-spacing:3px;display:flex;gap:12px;align-items:center}.brand i{width:28px;height:28px;background:var(--teal);display:grid;place-items:center;color:white;font-size:17px;font-style:normal;letter-spacing:0}nav{display:flex;gap:22px;font-size:13px;align-items:center}.plain{border:0;background:none;color:inherit;padding:0;font-size:inherit}.wrap{max-width:1280px;margin:auto;padding:36px 5vw 70px}.eyebrow{font-size:11px;font-weight:650;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.muted{color:var(--muted)}.small{font-size:12px}.hero{display:grid;grid-template-columns:1fr 1.04fr;min-height:470px;margin:0 -5vw;padding:38px 5vw 28px;gap:40px}.hero h1{font-size:clamp(42px,5.2vw,74px);letter-spacing:-2px;margin:20px 0}.hero h1 em{font-style:normal;color:var(--teal)}.hero p{max-width:440px;color:var(--muted);font-size:15px}.btn{border:1px solid var(--line);padding:12px 21px;background:transparent;color:var(--ink);font-size:14px;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;gap:18px}.btn:hover{border-color:var(--teal);background:#e4ebe2}.btn.primary{background:var(--teal);color:white;border-color:var(--teal)}.btn.primary:hover{background:#116256}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.stamp{font-size:10px;letter-spacing:2px;border:1px solid currentColor;padding:4px 8px;display:inline-block;color:var(--red)}.city{position:relative;align-self:center;aspect-ratio:1.2;background:var(--dark);border-radius:5px;overflow:hidden;box-shadow:0 20px 40px #122d351c}.city svg{width:100%;height:100%}.city-label{position:absolute;top:25px;left:25px;color:#9eb9b7;letter-spacing:2px;font-size:10px}.city-caption{position:absolute;bottom:20px;left:25px;color:#c6d3ca;font-size:11px}.city .number{position:absolute;top:46px;left:25px;font:42px Georgia;color:#f3e9cd}.pulse{animation:pulse 4s ease-in-out infinite}@keyframes pulse{50%{opacity:.35}}.ribbon{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:20px 0 42px}.ribbon>div{padding:18px 20px;border-right:1px solid var(--line)}.ribbon>div:first-child{padding-left:0}.ribbon>div:last-child{border:0}.ribbon b{display:block;font-size:15px}.ribbon span{font-size:11px;color:var(--muted)}.intro{display:grid;grid-template-columns:1.35fr 1fr;gap:65px;margin-bottom:35px}.intro p{margin-top:18px}.intro h2{font-size:30px}.paper{background:var(--paper);border:1px solid var(--line);padding:28px;border-radius:4px}.paper p+p{margin-top:16px}.margin-note{border-left:2px solid var(--gold);padding:0 0 0 20px;margin:24px 0;font-size:14px}.note{font-size:12px;color:var(--muted);margin-top:20px}.notice{font-size:12px;border-top:1px solid var(--line);padding-top:18px;margin-top:25px;color:var(--muted)}.progress{display:flex;align-items:center;gap:12px;margin-bottom:32px;font-size:12px;color:var(--muted)}.progress .line{height:1px;background:var(--line);flex:1}.progress .active{color:var(--teal);font-weight:700}.layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:38px}.rail{border-right:1px solid var(--line);padding-right:26px}.rail h3{font-size:24px;margin:13px 0}.rail .meter{margin-top:26px;padding-top:18px;border-top:1px solid var(--line)}.rail .meter b{display:block;font-size:14px;margin:6px 0}.rail small{color:var(--muted);display:block}.rail .chapter{margin-top:28px;color:var(--muted);font-size:12px}.chapter>div{margin:15px 0}.chapter .now{color:var(--teal);font-weight:700}.stage h1{font-size:clamp(30px,3.3vw,47px);white-space:pre-line;margin:12px 0 20px}.lede{font-size:16px;line-height:1.95;max-width:750px}.tension{margin:22px 0 28px;padding-left:20px;border-left:2px solid var(--gold);font-size:15px}.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin:32px 0 14px}.section-head h2{font-family:inherit;font-size:18px}.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.tab{border:1px solid var(--line);background:#e9e9df;text-align:left;padding:14px 16px;color:var(--ink);border-radius:4px 4px 0 0;font-size:14px}.tab[aria-selected=true]{background:var(--paper);border-bottom:2px solid var(--teal)}.tab span{font-size:10px;color:var(--muted);display:block}.dossier{min-height:240px;border:1px solid var(--line);border-top:0;padding:25px 30px;background:var(--paper)}.dossier h3{font-size:25px;margin:9px 0 16px}.dossier p{white-space:pre-line;font-size:15px}.dossier .note{font-size:11px}.choice{display:grid;grid-template-columns:35px 1fr;gap:14px;text-align:left;width:100%;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px;margin:12px 0;color:var(--ink)}.choice:hover{border-color:var(--teal)}.choice[aria-pressed=true]{border:2px solid var(--teal);padding:19px;background:#eaf0e8}.choice .letter{font:25px Georgia;color:var(--teal)}.choice strong{display:block;font-size:17px;margin-bottom:7px}.choice p{font-size:14px}.choice small{display:block;color:var(--muted);margin-top:10px}.order{margin-top:24px;padding:25px;background:#e3e9e1;border-top:3px solid var(--teal)}.order label{display:block;font-weight:600;font-size:14px;margin:20px 0 8px}textarea{width:100%;border:1px solid #bdc9bf;padding:13px;background:var(--paper);color:var(--ink);border-radius:3px;resize:vertical;min-height:100px}input[type=range]{width:100%;accent-color:var(--teal)}.range-row{display:flex;justify-content:space-between;font-size:12px}.status{font-size:12px;color:var(--red);margin-top:12px;min-height:22px}.seal{background:var(--dark);color:#eef1e7;padding:26px;border-radius:4px;margin:24px 0}.seal .eyebrow{color:#a3c3b9}.seal blockquote{font-size:17px;margin:18px 0;white-space:pre-wrap}.seal .muted{color:#aec1bc}.reveal{padding:28px;border:1px solid var(--line);background:var(--paper);margin:18px 0}.reveal h2{font-size:27px;margin:10px 0 18px}.reveal p{margin:13px 0}.insight{font-family:'SimSun',serif;font-size:24px;color:var(--teal);line-height:1.6;margin:30px 0;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.alternatives{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.alternative{padding:20px;background:#e7e8de;border-top:2px solid var(--line);font-size:13px}.alternative.chosen{border-top-color:var(--teal)}.alternative h3{font-size:15px;margin-bottom:12px}.source-list a{text-decoration:underline;text-underline-offset:3px}.source-list{font-size:12px;color:var(--muted);margin-top:20px}.source-list p{margin:8px 0}details{margin:18px 0}summary{cursor:pointer;font-size:13px}.history-card{border-top:1px solid var(--line);padding:25px 0}.history-card h3{font-size:21px;margin:10px 0}.history-card p{margin-top:12px}.pill{font-size:11px;color:var(--teal);border:1px solid #a5b9ac;border-radius:20px;padding:3px 10px}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);padding:12px 22px;background:var(--dark);color:white;border-radius:4px;z-index:10;font-size:13px;max-width:90vw}.footer{font-size:11px;color:var(--muted);margin-top:55px;border-top:1px solid var(--line);padding-top:20px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}dialog{background:var(--paper);color:var(--ink);border:1px solid var(--line);padding:30px;max-width:600px;width:90vw;max-height:85vh;overflow:auto}dialog::backdrop{background:#102c35b0}dialog h2{font-size:25px;margin-bottom:18px}dialog .btn{margin-top:15px}input[type=file]{max-width:100%}@media(max-width:800px){header{height:auto;min-height:68px;padding:16px 5vw}nav{gap:12px}.brand span{font-size:17px}nav a{display:none}.hero{grid-template-columns:1fr;gap:28px;padding-top:15px}.hero h1{font-size:51px}.city{max-height:320px;aspect-ratio:1.6;width:100%}.ribbon{grid-template-columns:1fr 1fr}.ribbon>div:nth-child(3){padding-left:0}.intro{grid-template-columns:1fr;gap:24px}.layout{grid-template-columns:1fr;gap:22px}.rail{border-right:0;border-bottom:1px solid var(--line);padding:0 0 18px}.rail .chapter,.rail .meter{display:none}.rail h3{display:inline;margin:0 12px;font-size:18px}.rail .eyebrow{display:inline}.rail>small{margin-top:8px}.stage h1{font-size:34px}.alternatives{grid-template-columns:1fr}.dossier{padding:22px;min-height:290px}.tab{padding:11px}.progress{gap:7px;font-size:10px}.paper,.reveal{padding:22px}.wrap{padding-top:24px}.section-head{align-items:flex-start}.small{font-size:11px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}@media print{header,.actions,.btn,nav,.tabs,.footer{display:none!important}body{background:white}.wrap{padding:0}.layout{display:block}.rail{display:none}.seal{color:black;background:#eee}.seal .muted,.seal .eyebrow{color:#444}.history-card{break-inside:avoid}}
+</style></head><body><header><a class="brand" href="./" aria-label="经营者首页"><i>经</i><span>经营者</span></a><nav><a href="library.html">案例与课程 ↗</a><button class="plain" onclick="showRecords()">我的档案</button><button class="plain" onclick="showAbout()">使用说明</button></nav></header><main class="wrap" id="app"></main><dialog id="modal"></dialog><div id="announce" role="status" aria-live="polite"></div><script>
+const E={
+  "id": "STR-0001",
+  "version": 3,
+  "title": "千团大战：下一笔钱",
+  "sources": [
+    {
+      "id": "S1",
+      "date": "2011-03-14",
+      "title": "北京商报：过期包退计划（同期报道）",
+      "url": "https://finance.ifeng.com/news/special/2011315/20110314/3655793.shtml"
+    },
+    {
+      "id": "S2",
+      "date": "2011-07-07",
+      "title": "新浪科技：B轮融资发布会（同期采访）",
+      "url": "https://tech.sina.com.cn/i/2011-07-07/11005745178.shtml"
+    },
+    {
+      "id": "S3",
+      "date": "2011-07-07",
+      "title": "经济观察网：融资与广告策略（同期采访）",
+      "url": "https://www.eeo.com.cn/2011/0707/205540.shtml"
+    },
+    {
+      "id": "S4",
+      "date": "2011-11-11",
+      "title": "新浪科技：IPO延迟（消息来源含匿名人士，原因未获独立证实）",
+      "url": "https://tech.sina.com.cn/i/2011-11-11/09216306701.shtml"
+    },
+    {
+      "id": "S5",
+      "date": "2012-06-21",
+      "title": "北京青年报：拉手6月19日撤销申请",
+      "url": "https://msn.finance.sina.com.cn/gdxw/20120621/0000998863.html"
+    },
+    {
+      "id": "S6",
+      "date": "2014-02-21",
+      "title": "王兴十年（回顾性人物报道，清华校友总会转载）",
+      "url": "https://www.tsinghua.org.cn/info/1014/11230.htm"
+    }
+  ],
+  "scenes": [
+    {
+      "date": "2011 · 03",
+      "eyebrow": "第一幕 / 一张没有消费的券",
+      "title": "钱已经收到了。\n生意结束了吗？",
+      "scene": "把时间拨回2011年3月，退款政策公布前的教学回放。你坐在美团经营者的位置：消费者先付钱购买团购券，随后到线下商家消费。网站上的支付完成了，线下的服务却可能还没有开始。",
+      "tension": "现在，一类钱留在平台上：券过期了，消费者没有消费。你要决定，平台怎样处理这类钱。它关系到的不只是一笔支出，还有你准备向消费者出售什么样的承诺。",
+      "known": "预付款团购模式",
+      "unknown": "自由现金、净流出、退款后的复购变化",
+      "dossiers": [
+        {
+          "name": "消费者",
+          "tag": "角色视角 · 教学演绎",
+          "title": "我买的，是一次服务。",
+          "body": "“券已经过期，我确实没去。但这笔钱，难道就没有办法处理了？”\n对消费者而言，付款和得到服务是两件事。有人会提出退款，有人不会。他们会不会再买，材料没有告诉你。",
+          "note": "这段台词用于呈现利益冲突，不是真实投诉记录。"
+        },
+        {
+          "name": "增长团队",
+          "tag": "角色视角 · 教学演绎",
+          "title": "同一笔资源，也可以带来新客。",
+          "body": "“我们当然希望消费者满意。但如果马上推出全面退款，系统、客服和资金都要跟上。把同样的力量用来做新的团购，我们也许可以拉来更多用户。”\n他们要求你考虑兑现新承诺所挤占的其他工作。",
+          "note": "这是待检验的经营主张，没有提供获客与退款回报的比较数据。"
+        },
+        {
+          "name": "资金备忘",
+          "tag": "机制材料 · 非公司账簿",
+          "title": "没有消费的券，怎么结清？",
+          "body": "团购把线上收款与线下消费分开。不同结算规则会影响平台什么时候向商户付款，退款规则又会改变平台对用户的义务。\n本案没有拿到当期完整协议和现金明细。你不能从“款在账上”直接推算可自由投入的金额。",
+          "note": "本幕不提供虚构的现金跑道。政策发布日期前的具体会议无法还原，决策菜单为教学重构。"
+        }
+      ],
+      "question": "你会批准哪一种过期券处理方案？",
+      "options": [
+        {
+          "id": "claims",
+          "name": "逐笔申请，审核退款",
+          "pitch": "先建立申请渠道，核验后处理；暂不承诺对所有过期未消费券统一退款。",
+          "cost": "现金支出可能分散，但用户要承担申请与等待成本。",
+          "assumption": "个案处理能以较低成本解决主要不满。",
+          "test": "如果大量未申请用户同样流失，少量投诉并不能证明政策有效。",
+          "challenge": "你降低的是服务问题，还是仅仅降低了被看见的问题？"
+        },
+        {
+          "id": "refund",
+          "name": "建立统一过期退款政策",
+          "pitch": "把退款变成明确规则，配套系统与客服，对未消费款按规则退回。",
+          "cost": "需要承担退款支出和履约建设；回头客是否因此增加，尚不确定。",
+          "assumption": "确定的退款承诺值得它的资金与执行成本。",
+          "test": "即使复购没有明显增加，你是否仍有足够依据支持这项承诺？",
+          "challenge": "“对客户好”还不是完整预算，你给兑现承诺安排了什么资源？"
+        },
+        {
+          "id": "terms",
+          "name": "先按现有条款处理",
+          "pitch": "暂不新增普遍退款承诺，改善购买说明和到期提醒，再决定是否改变政策。",
+          "cost": "减少新增承诺，但已产生的不满可能延续；条款的法律适用仍需审查。",
+          "assumption": "更清晰的说明与提醒可以解决主要问题。",
+          "test": "如果理解条款的人仍不愿再买，仅优化说明可能不够。",
+          "challenge": "你解决的是信息误解，还是消费者不接受这种交易关系？"
+        }
+      ],
+      "actual": "美团在2011年3月推出过期退款。同期北京商报报道涉及此前未消费款项1000余万元；2014年人物回顾也记载了该政策与资金影响。[S1/S6]",
+      "why": "人物报道将这一选择解释为争取消费者信任与口碑。它是一项关于长期交易关系的判断，并非已经证明“每退一元就能赚回更多”。历史资料没有给出可用于归因的对照实验。",
+      "insight": "少留一笔钱，可能是在建立下一次交易的条件。账面留存与可持续生意，不是同一个目标。",
+      "compare": [
+        "逐笔申请能控制执行节奏，但申请门槛也会筛掉不愿交涉的用户，不能只看已解决投诉。",
+        "统一政策把承诺从个案变成规则，但系统兑现、资金准备与效果检验都不能省。",
+        "条款与提醒可以减少误会，却未必改变用户对交易公平性的感受。"
+      ],
+      "bridge": "退款政策成为承诺。新的问题随之而来：还要继续获客、拓展商户、建设团队。把日历翻到7月，一笔融资到账——现在，关于钱怎么花的争论会更大。",
+      "sources": [
+        "S1",
+        "S6"
+      ]
+    },
+    {
+      "date": "2011 · 07 · 07",
+      "eyebrow": "第二幕 / 钱到账以后",
+      "title": "你终于有钱了。\n要按谁的节奏花？",
+      "scene": "美团宣布B轮5000万美元融资完成，资金已到账。成立一年多，公司披露截至5月底已在近100个城市开站、员工1800多人。你面对的已不是一间办公室，而是一张分散在各地的经营网络。[S2]",
+      "tension": "如果新钱只停在账户上，团队会问增长机会在哪里；如果快速铺出去，你得回答花出去之后能留下什么。这次你要批准的，是获客与建设的主方向。",
+      "known": "5000万美元 / 本轮融资",
+      "unknown": "各渠道获客成本、留存、城市贡献",
+      "dossiers": [
+        {
+          "name": "融资通报",
+          "tag": "同期报道 · S2",
+          "title": "资金到账，不等于问题解决。",
+          "body": "2011年7月7日融资发布会：阿里巴巴领投，另有机构跟投。报道转述首轮资金尚未使用。\n这是融资与公开表述，不是经本课程审计的自由现金余额。不同币种、商户结算与退款义务也未完整列出。",
+          "note": "公司披露的销售预期不是已经实现的收入或利润，本幕不把它当业绩。"
+        },
+        {
+          "name": "城市一线",
+          "tag": "利益冲突 · 教学演绎",
+          "title": "商户问：你能带来多少人？",
+          "body": "“每次谈商户，我们都要证明自己能带来顾客。只有后台能力，没有人知道我们，怎么签单？”\n前线希望得到能被商户看见的支持。你需要决定：是买来广泛知名度，还是以更接近购买的渠道触达客户。",
+          "note": "不是当年现场对话。真实历史中的广告争论将在签批后展示。"
+        },
+        {
+          "name": "投入清单",
+          "tag": "教学议案 · 无虚构金额",
+          "title": "三个都能花钱的地方。",
+          "body": "品牌广告：先让更多人认识平台，再争取交易。\n交易获客与交付：在已有购买意图的人群中获客，同时改善商户服务。\n现金储备：减少当下承诺，为未来变局留下余地。\n三者都可能有价值，本幕缺少能直接排出回报高低的数据。",
+          "note": "你决定优先级，不是假装能计算一个未经提供数据支持的最优预算。"
+        }
+      ],
+      "question": "你把新增投入的主方向放在哪里？",
+      "options": [
+        {
+          "id": "ads",
+          "name": "品牌曝光优先",
+          "pitch": "推进大范围品牌投放，给各地销售统一的知名度支持。",
+          "cost": "覆盖面大，但从看到广告到复购之间仍有缺口。",
+          "assumption": "品牌认知能以可接受成本转化为交易与留存。",
+          "test": "如果曝光上涨而有效新客没有增加，你愿意何时停投？",
+          "challenge": "你的依据能证明客户资产增加，还是只能证明更多人见过广告？"
+        },
+        {
+          "id": "direct",
+          "name": "交易获客与交付优先",
+          "pitch": "优先可跟踪的购买渠道及商户服务建设，逐项验证再追加。",
+          "cost": "触达可能更窄，前线也可能认为品牌声量不足。",
+          "assumption": "接近交易的获客方式能留下更好的单位贡献。",
+          "test": "若低成本渠道规模受限、无法支撑增长，何时改变组合？",
+          "challenge": "能追踪并不自动等于增量，原本就会购买的人也可能被算进效果。"
+        },
+        {
+          "id": "reserve",
+          "name": "新增投入暂缓放行",
+          "pitch": "先核清资金义务与现有城市表现，再分批审批新增预算。",
+          "cost": "保留机动空间，但已有资金无法自动形成竞争位置。",
+          "assumption": "等待所得的信息价值，大于错过窗口的成本。",
+          "test": "哪一项信息一旦查明，你就必须放行，不能继续无限等待？",
+          "challenge": "你给团队的是一条可执行的审批门槛，还是一个没有期限的“再看看”？"
+        }
+      ],
+      "actual": "美团公开列出的资金用途包括服务、技术和人才。[S2] 同期采访报道其不准备加入广告烧钱战。[S3] 事后报道记载了其购买搜索关键词和导航渠道的做法。[S6]",
+      "why": "回顾性材料给出的解释，是更重视靠近购买环节的触达，并保留资金。这并非“完全不打广告”。我们可以确认所报道的渠道取舍，不能把它简化成品牌广告永远无效。",
+      "insight": "历史里的分歧不是“花钱还是不花钱”，而是为哪一段转化付钱，以及用什么证据继续付钱。",
+      "compare": [
+        "品牌曝光可能帮助销售、积累认知；缺少增量与留存验证时，它也可能成为竞争性加码。",
+        "交易渠道更容易观察转化；但归因、容量和服务承载决定它能不能扩大。",
+        "储备保留选择权；只有明确了重新放行的条件，储备才不会变成长期停滞。"
+      ],
+      "bridge": "你已经签下投入方向。四个月后，一条对手的消息传来。它看起来像机会，也可能意味着你所处的整个行业都将更难融资。",
+      "sources": [
+        "S2",
+        "S3",
+        "S6"
+      ]
+    },
+    {
+      "date": "2011 · 11 · 11",
+      "eyebrow": "第三幕 / 机会来了，谁接得住",
+      "title": "对手慢下来了。\n你的组织准备好了吗？",
+      "scene": "媒体报道拉手网暂停路演、推迟赴美IPO。注意，此刻是推迟，不是最终撤销；关于具体原因的说法包含匿名消息，不能直接当作已经查明的事实。[S4]",
+      "tension": "假如商户、人才或区域机会真的松动，你会冲上去吗？你能不能把新机会交给一个能执行的组织，而不只是把新的目标交给更多人？下一张命令，关系到扩张的承载方式。",
+      "known": "IPO推迟 / 非最终结局",
+      "unknown": "融资窗口持续时间、各区域承载能力",
+      "dossiers": [
+        {
+          "name": "市场快讯",
+          "tag": "同期报道 · S4",
+          "title": "一条消息，两个方向。",
+          "body": "拉手IPO进程受阻，会影响其融资节奏；这不代表它已经退出竞争。\n同期报道也记录了业内对融资和商户信心的担忧。那是受访者的判断，不是所有投资人已经停止投资的证据。",
+          "note": "没有给你对手现金余额，不可推算对手还能活几个月。"
+        },
+        {
+          "name": "区域负责人",
+          "tag": "角色视角 · 教学演绎",
+          "title": "给我城市，也要给我支撑。",
+          "body": "“如果现在有机会，我们能不能接？新的商户谁带，新的销售谁教，服务出问题谁来纠正？”\n多一个城市，意味着多一组当地关系和日常执行。总部看见总量，不等于已经看见每个城市的异常。",
+          "note": "这是规模化运营的情境设问，不是对美团当时具体故障的指控。"
+        },
+        {
+          "name": "组织议案",
+          "tag": "教学议案 · 尚未揭晓历史",
+          "title": "你要改变哪一种工作？",
+          "body": "把力量放在争取新商户与人才：机会短暂，先争取位置。\n把力量放在守住现有履约与结算：先降低外部冲击的伤害。\n把力量放在区域管理与销售训练：先建立扩大业务的承载能力。",
+          "note": "三条路线可以组合；本轮要求你明确谁优先，哪项工作必须让位。"
+        }
+      ],
+      "question": "下一阶段，哪一项工作优先拿到团队的精力？",
+      "options": [
+        {
+          "id": "expand",
+          "name": "先抢商户与人才",
+          "pitch": "设定边界后主动争取机会，让现有团队承担接入。",
+          "cost": "行动快，但新业务可能超过管理和交付能力。",
+          "assumption": "现有组织可以承接增加的业务复杂度。",
+          "test": "若新增业务持续挤压老客户交付，你会如何缩小范围？",
+          "challenge": "对手变弱，是外部机会；你接得住，是另一项需要证据的判断。"
+        },
+        {
+          "id": "hold",
+          "name": "先稳现有经营",
+          "pitch": "放慢新增动作，优先履约、退款与商户结算。",
+          "cost": "对坏情景更有准备，也可能错过结构性机会。",
+          "assumption": "当前最大的损失风险来自资金与履约波动。",
+          "test": "如果现有履约已经稳定，你还会用什么条件限制所有新增动作？",
+          "challenge": "你保护了今天的生意，是否也安排了让明天更有效率的工作？"
+        },
+        {
+          "id": "org",
+          "name": "先建区域指挥体系",
+          "pitch": "明确区域负责人，配套销售训练、经营反馈与异常处理，再放行扩张。",
+          "cost": "调整需要时间，也会占用正在做业务的人。",
+          "assumption": "管理承载是限制业务扩大的关键环节。",
+          "test": "如果只是增加会议与层级，经营没有改善，何时调整方案？",
+          "challenge": "你批准的是新的组织图，还是可以追责、反馈和纠偏的运行方式？"
+        }
+      ],
+      "actual": "回顾性人物报道记载，干嘉伟于2011年11月16日加入美团，随后调整区域管理，把两个大区分为八个。[S6] 这证明了组织建设动作，不能证明其他工作全被停止。",
+      "why": "把范围分小、责任明确，可能改善信息传递和执行。这个机制解释了组织投入为什么值得考虑；但增加大区数量本身不是成功的充分条件，我们没有一组能隔离该调整效果的实验数据。",
+      "insight": "资金让你有资格继续竞争，组织决定你能不能把一次机会变成反复做到的能力。",
+      "compare": [
+        "抢位能利用短暂机会；没有接入门槛，可能同时损伤新增和存量业务。",
+        "守住经营有价值；如果连效率改进也停下，就只是延长原有问题。",
+        "区域管理有历史动作支持；价值要落在责任、反馈与执行，不能由组织名称证明。"
+      ],
+      "bridge": "历史继续往前走，你的三次判断留在桌上。现在不按“像不像王兴”算分，而是检查你自己说过的理由、愿意承担的代价，以及下一次会如何改变。",
+      "sources": [
+        "S4",
+        "S6"
+      ]
+    }
+  ]
+};
+const KEY='business-command-v3', $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let db={schemaVersion:3,episode:E.id,runs:[],active:null},saveWarning=false;
+try{let v=JSON.parse(localStorage.getItem(KEY));if(v&&validDB(v))db=v}catch{saveWarning=true}
+function validRun(r){return r&&typeof r.id==='string'&&Array.isArray(r.decisions)&&r.decisions.length<=3&&r.decisions.every((d,i)=>E.scenes[i].options.some(o=>o.id===d.option)&&typeof d.reason==='string'&&typeof d.stop==='string'&&typeof d.reflection==='string'&&Number.isFinite(d.confidence)&&d.confidence>=0&&d.confidence<=100)&&Number.isInteger(r.index)&&r.index>=0&&r.index<=3&&['desk','reveal','report'].includes(r.phase)&&r.index===(r.phase==='reveal'?r.decisions.length-1:r.decisions.length)&&(r.phase!=='desk'||r.index<3)&&(r.phase!=='report'||r.index===3)&&r.drafts&&typeof r.drafts==='object'&&Object.entries(r.drafts).every(([k,d])=>['0','1','2'].includes(k)&&validDraft(d,Number(k)))}
+function validDraft(d,i){return d&&typeof d.reason==='string'&&typeof d.stop==='string'&&Number.isFinite(d.confidence)&&d.confidence>=0&&d.confidence<=100&&Number.isInteger(d.tab)&&d.tab>=0&&d.tab<3&&Array.isArray(d.read)&&d.read.every(n=>Number.isInteger(n)&&n>=0&&n<3)&&(d.option===null||E.scenes[i].options.some(o=>o.id===d.option))}
+function validDB(v){return v.schemaVersion===3&&v.episode===E.id&&Array.isArray(v.runs)&&v.runs.every(validRun)&&(!v.active||validRun(v.active))}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(db));return true}catch{saveWarning=true;notify('本机保存失败，请从“我的档案”导出备份。');return false}}
+function notify(t){$('announce').innerHTML='<div class="toast">'+esc(t)+'</div>';setTimeout(()=>$('announce').innerHTML='',4500)}
+function top(){window.scrollTo({top:0,behavior:'instant'});$('app').setAttribute('tabindex','-1');$('app').focus({preventScroll:true})}
+function footer(){return '<footer class="footer"><span>个人商学院 / 真实商业 · 独立判断</span><span>V3.0 · 无需会员或AI接口 · 进度保存在当前浏览器</span></footer>'}
+function city(){let blocks='';for(let r=0;r<9;r++)for(let c=0;c<9;c++){let x=135+(c-r)*23,y=115+(c+r)*12,h=8+((r*13+c*7)%5)*6;blocks+=`<path d="M${x} ${y}l17 9 -17 9 -17 -9z" fill="#34515a"/><path d="M${x-17} ${y+9}v${-h}l17 9v${h}z" fill="#456571"/><path d="M${x} ${y+18}v${-h}l17 -9v${h}z" fill="#28434d"/><path d="M${x-17} ${y+9-h}l17 -9 17 9 -17 9z" fill="${(r+c)%4===0?'#ae9463':'#68847d'}"/>`};return `<div class="city"><div class="city-label">一座城市，三种账本</div><div class="number">2011</div><svg viewBox="-100 0 500 390" role="img" aria-label="抽象城市经营网络示意，非真实地理或经营数据"><defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#749390" stroke-opacity=".1"/></pattern></defs><rect x="-100" width="500" height="390" fill="url(#grid)"/><g transform="translate(20 4)">${blocks}<path d="M-60 235L135 130 325 232M-35 265L136 175 290 260" fill="none" stroke="#dab76c" stroke-width="2" opacity=".7"/><g class="pulse" fill="#ffe1a0"><circle cx="135" cy="130" r="5"/><circle cx="-35" cy="265" r="4"/><circle cx="290" cy="260" r="4"/></g></g></svg><div class="city-caption">顾客的承诺 / 商户的生意 / 平台的下一笔钱<br>概念示意 · 非历史地图</div></div>`}
+function home(){let active=db.active;$('app').innerHTML=`<section class="hero"><div><div class="eyebrow">商业纪实互动剧场 / 案卷 STR-0001</div><h1>千团大战<br><em>下一笔钱</em></h1><p>一家年轻的平台，一座座要拿下的城市。<br>钱从消费者、商户和投资人手中经过。<br>现在，你决定它流向哪里。</p><div class="actions"><button class="btn primary" onclick="${active?'render()':'begin()'}">${active?'回到决策桌':'进入 2011 年'} <span>↗</span></button>${active?'<button class="btn" onclick="restart()">重新入局</button>':''}</div><p class="note">三幕完整体验 · 约 20 分钟 · 可随时离开再继续</p></div>${city()}</section><section class="ribbon"><div><span>你的位置</span><b>美团经营决策席</b></div><div><span>你要面对</span><b>承诺 / 获客 / 组织</b></div><div><span>信息规则</span><b>只知道当时能知道的</b></div><div><span>你带走的</span><b>自己的判断与修正</b></div></section><section class="intro"><div><div class="eyebrow">在命令之前 / 先理解这门生意</div><h2 style="margin-top:12px">网站上的一笔成交，<br>线下才刚刚开始。</h2><p>消费者在线买券，商户在线下接待。平台要让两边愿意再来。销售谈下一个商户，产品让下一笔订单更顺利，客服接住兑现不了的承诺。每个岗位都有理由向你要资源。</p><p>你将站在王兴的经营决策位置，但不需要猜他“正确的答案”。你需要在信息不完整时，说明自己愿意承担什么，又准备在何时改变主意。</p><div class="margin-note">每幕先翻阅三份材料，再签下命令。历史随后揭封；你的理由会留在旁边，接受同一组事实的检验。</div></div><aside class="paper"><span class="stamp">角色档案 / 过去已知</span><h3 class="serif" style="font-size:24px;margin-top:18px">这不是第一次创业。</h3><p>回顾性人物报道记载，王兴在美团之前经历过校内网出售与饭否停服。这里仅取2011年以前的经历，不把后来结果带进决策。[S6]</p><p>2010年3月，美团成立。[S2] 这一次，互联网产品之外，还有真实商户、线下服务和需要持续运转的城市团队。</p><p class="note">角色处境由历史材料改编；界面中的会议、台词与选项均为教学演绎，并非当事人会议实录。</p></aside></section><div class="notice">本集训练资源取舍：把熟悉的城市与渠道经营经验，迁移到新的商业模式。目标是为现实业务与自己的小额项目建立判断依据，而不是在模拟里追求无代价增长。${saveWarning?' <strong>浏览器存储不可用或记录损坏，请注意导出。</strong>':''}</div>${footer()}`}
+function begin(){db.active={id:String(Date.now()),episode:E.id,version:3,startedAt:new Date().toISOString(),phase:'desk',index:0,drafts:{},decisions:[]};save();render()}
+function restart(){if(confirm('当前进度会保留在档案中，然后开始新局。继续？')){if(db.active)db.runs.push({...db.active,archivedAt:new Date().toISOString(),incomplete:db.active.decisions.length<3});begin()}}
+function draft(){let r=db.active;return r.drafts[r.index]||(r.drafts[r.index]={option:null,reason:'',stop:'',confidence:60,read:[],tab:0})}
+function shell(content){let r=db.active,i=Math.min(r.index,2),s=E.scenes[i];return `<div class="progress"><span class="active">入局</span><span class="line"></span>${['承诺','获客','组织'].map((x,k)=>`<span class="${k<=i?'active':''}">${String(k+1).padStart(2,'0')} ${x}</span><span class="line"></span>`).join('')}<span class="${r.phase==='report'?'active':''}">复盘</span></div><div class="layout"><aside class="rail"><div class="eyebrow">经营决策桌</div><h3 class="serif">${s.date}</h3><small>STR-0001 / 千团大战</small><div class="meter"><span class="eyebrow">已经知道</span><b>${s.known}</b></div><div class="meter"><span class="eyebrow">仍未知道</span><small>${s.unknown}</small></div><div class="chapter"><div class="now">${r.phase==='desk'?'● 阅读材料 → 签批命令':r.phase==='reveal'?'● 命令已封存 → 历史揭封':'● 三幕结束 → 整理判断'}</div><div>下一幕情报尚未开放</div></div><div class="meter"><button class="plain small" onclick="home();top()">← 返回封面，保留进度</button></div></aside><section class="stage">${content}</section></div>${footer()}`}
+function render(){if(!db.active)return home();if(db.active.phase==='desk')desk();else if(db.active.phase==='reveal')reveal();else report();top()}
+function dossierHTML(s,d){let x=s.dossiers[d.tab];return `<div class="eyebrow">${x.tag}</div><h3 class="serif">${x.title}</h3><p>${x.body}</p><p class="note">${x.note}</p>`}
+function desk(){let r=db.active,s=E.scenes[r.index],d=draft();if(!d.read.includes(d.tab))d.read.push(d.tab);save();$('app').innerHTML=shell(`<div class="eyebrow">${s.eyebrow}</div><h1>${s.title}</h1><p class="lede">${s.scene}</p><p class="tension">${s.tension}</p><div class="section-head"><h2>桌上的三份材料</h2><span id="readcount" class="small muted">已打开 ${d.read.length}/3 · 可反复查阅</span></div><div class="tabs" role="tablist" aria-label="决策材料">${s.dossiers.map((x,k)=>`<button id="tab${k}" class="tab" role="tab" aria-controls="dossier" aria-selected="${d.tab===k}" onclick="openDossier(${k})"><span>材料 0${k+1} ${d.read.includes(k)?'· 已打开':''}</span>${x.name}</button>`).join('')}</div><article id="dossier" class="dossier" role="tabpanel" aria-labelledby="tab${d.tab}">${dossierHTML(s,d)}</article><div class="section-head"><h2>你的签批</h2><span class="small muted">三个方案均为教学设计</span></div><h3 style="font-size:20px;margin-bottom:18px">${s.question}</h3>${s.options.map((o,k)=>`<button class="choice" id="opt${k}" aria-pressed="${d.option===o.id}" onclick="choose(${k})"><span class="letter">${'ABC'[k]}</span><span><strong>${o.name}</strong><p>${o.pitch}</p><small>要承担的代价 / ${o.cost}</small></span></button>`).join('')}<div class="order"><div class="eyebrow">给团队的一句话 / 将原样进入复盘</div><label for="reason">为什么签这条命令？你愿意承担什么代价？</label><textarea id="reason" placeholder="用你的话说，不需要术语。" oninput="writeDraft('reason',this.value)">${esc(d.reason)}</textarea><label for="stop">看到什么具体变化，你会改变命令？</label><textarea id="stop" placeholder="留下一个能让你改主意的条件。" oninput="writeDraft('stop',this.value)">${esc(d.stop)}</textarea><label for="confidence">你对这条路线的把握：<output id="confidenceOut">${d.confidence}%</output></label><input id="confidence" type="range" min="0" max="100" step="5" value="${d.confidence}" oninput="writeDraft('confidence',Number(this.value));$('confidenceOut').textContent=this.value+'%'" aria-label="决策把握百分比"><div class="range-row muted"><span>尚在试探</span><span>较有把握</span><span>非常确定</span></div><p class="note">这是自报把握，不能直接当作事件概率计算校准得分。</p><div id="formstatus" class="status" role="status"></div><button class="btn primary" onclick="commit()">签下命令，打开历史 ↗</button></div>`)}
+function openDossier(k){let d=draft(),s=E.scenes[db.active.index];d.tab=k;if(!d.read.includes(k))d.read.push(k);save();$('dossier').innerHTML=dossierHTML(s,d);$('dossier').setAttribute('aria-labelledby','tab'+k);s.dossiers.forEach((x,j)=>{$('tab'+j).setAttribute('aria-selected',j===k);$('tab'+j).innerHTML=`<span>材料 0${j+1} ${d.read.includes(j)?'· 已打开':''}</span>${x.name}`});$('readcount').textContent=`已打开 ${d.read.length}/3 · 可反复查阅`}
+function choose(k){let d=draft(),s=E.scenes[db.active.index];d.option=s.options[k].id;s.options.forEach((o,j)=>$('opt'+j).setAttribute('aria-pressed',j===k));save()}
+function writeDraft(k,v){draft()[k]=v;save()}
+function commit(){let r=db.active,d=draft();if(!d.option||d.reason.trim().length<4||d.stop.trim().length<4){$('formstatus').textContent='请选定路线，并留下你的理由和改变命令的条件（各至少4个字）。';return}if(d.read.length<3){$('formstatus').textContent='还有材料未打开。先听完三方意见，再签下命令。';return}r.decisions.push({...d,signedAt:new Date().toISOString(),reflection:'',selfCheck:null});r.phase='reveal';save();render()}
+function sources(ids){return `<details class="source-list"><summary>本幕史料与证据边界（原文可能含后续剧情）</summary>${ids.map(id=>{let x=E.sources.find(x=>x.id===id);return `<p>[${id}] ${x.date} <a href="${x.url}" target="_blank" rel="noopener noreferrer">${x.title} ↗</a></p>`}).join('')}<p>同期报道、当事人主张和事后回顾不等于完整内部档案。资料未记录全部备选方案，本页的替代路线比较属于教练分析。</p></details>`}
+function reveal(){let r=db.active,s=E.scenes[r.index],d=r.decisions[r.index],o=s.options.find(x=>x.id===d.option);$('app').innerHTML=shell(`<div class="eyebrow">命令已封存 / 第 ${r.index+1} 幕逐幕对照</div><h1>先别急着往下走。<br>看看你刚才押注了什么。</h1><div class="seal"><div class="eyebrow">你的命令 / ${esc(o.name)} / 把握 ${d.confidence}%</div><blockquote>“${esc(d.reason)}”</blockquote><p class="small muted">你承诺的改变条件：${esc(d.stop)}</p></div><article class="reveal"><div class="eyebrow">01 / 历史揭封</div><h2>当事人实际做了什么</h2><p>${s.actual}</p><div class="eyebrow" style="margin-top:25px">02 / 为什么这样做</div><p>${s.why}</p>${sources(s.sources)}</article><div class="insight">${s.insight}</div><article class="reveal"><div class="eyebrow">03 / 你的路线，最需要经受这一问</div><h2>${o.challenge}</h2><p><b>这条路线依赖的假设：</b>${o.assumption}</p><p><b>把你的理由放到这个情境中：</b>${o.test}</p><p class="note">以上是根据所选路线生成的对照，不是对自由文字的AI评分。若你的原话已处理这个风险，应保留你的论证，不因历史路线不同而判错。</p><label for="reflection" style="display:block;margin:20px 0 8px">你要保留或修正哪一点？ <span class="small muted">选填，自动保存</span></label><textarea id="reflection" placeholder="我原先认为……现在我会保留／调整……" oninput="reflect(this.value)">${esc(d.reflection)}</textarea><div class="actions"><button class="btn" aria-pressed="${d.selfCheck==='covered'}" onclick="selfCheck('covered')">我的原判断已考虑</button><button class="btn" aria-pressed="${d.selfCheck==='revise'}" onclick="selfCheck('revise')">我需要修正</button><span id="selfstatus" class="small muted">${d.selfCheck==='covered'?'已记录：原判断已考虑':d.selfCheck==='revise'?'已记录：需要修正':''}</span></div></article><div class="section-head"><h2>另外两条路，为什么也会有人选？</h2></div><div class="alternatives">${s.options.map((x,k)=>`<div class="alternative ${x.id===d.option?'chosen':''}"><span class="eyebrow">${'ABC'[k]} ${x.id===d.option?'你的选择':''}</span><h3>${x.name}</h3><p>${s.compare[k]}</p></div>`).join('')}</div><div class="paper" style="margin-top:28px"><div class="eyebrow">下一封来信</div><p style="margin-top:12px">${s.bridge}</p><p class="note">后续按真实历史推进，不把历史结果伪装成你的选择造成的结果。</p><div class="actions"><button class="btn primary" onclick="advance()">${r.index<2?'我已看完，进入下一幕 →':'整理我的决策档案 →'}</button></div></div>`)}
+function reflect(v){db.active.decisions[db.active.index].reflection=v;save()}
+function selfCheck(v){db.active.decisions[db.active.index].selfCheck=v;save();$('selfstatus').textContent=v==='covered'?'已记录：原判断已考虑':'已记录：需要修正';document.querySelectorAll('[onclick^="selfCheck"]').forEach(b=>b.setAttribute('aria-pressed',b.getAttribute('onclick').includes(v)))}
+function advance(){let r=db.active;r.decisions[r.index].reviewedAt=new Date().toISOString();r.index++;r.phase=r.index===3?'report':'desk';if(r.index===3)r.completedAt=new Date().toISOString();save();render()}
+function report(){let r=db.active;$('app').innerHTML=`<div class="eyebrow">个人经营档案 / STR-0001 / 三幕已完成</div><h1 style="font-size:46px;margin:20px 0">留下你的判断，<br>而不只是历史答案。</h1><p class="lede muted">三次命令都已封存。这里不以“和王兴选得一样”给你高分；你的理由、改变条件和修正，才是之后可以复测的东西。</p><div class="ribbon"><div><span>已签命令</span><b>3 / 3</b></div><div><span>自报需要修正</span><b>${r.decisions.filter(d=>d.selfCheck==='revise').length} 幕</b></div><div><span>已写复盘</span><b>${r.decisions.filter(d=>d.reflection.trim()).length} 幕</b></div><div><span>文字判断质量</span><b>待教练复核</b></div></div>${r.decisions.map((d,k)=>{let s=E.scenes[k],o=s.options.find(x=>x.id===d.option);return `<article class="history-card"><span class="eyebrow">${s.eyebrow}</span><h3>${esc(o.name)} <span class="pill">把握 ${d.confidence}%</span></h3><p><b>你的理由：</b>${esc(d.reason)}</p><p><b>改变条件：</b>${esc(d.stop)}</p><div class="margin-note"><b>这条路线的检验：</b>${o.test}</div><p><b>你的修正：</b>${esc(d.reflection||'未填写，不推断你已掌握。')}</p><details><summary>重看本幕历史与解释</summary><p>${s.actual}</p><p>${s.why}</p></details></article>`}).join('')}<section class="paper" style="margin-top:30px"><div class="eyebrow">只带走一个动作 / 回到你自己的城市</div><h2 style="margin-top:12px">给下一笔真实投入，写下改变条件。</h2><p style="margin-top:15px">从城市拓展、渠道补贴或小额项目中选一项。写清：准备投入什么，看到什么证据就追加，看到什么就停止。只用你能够承受损失的试验规模。</p><textarea style="margin-top:18px" aria-label="唯一改进动作" placeholder="我准备在……投入……；若……则追加；若……则停止。" oninput="db.active.action=this.value;save()">${esc(r.action||'')}</textarea><div class="actions"><button class="btn primary" onclick="downloadReport()">下载可阅读复盘 HTML ↓</button><button class="btn" onclick="exportData()">备份记录 JSON ↓</button><button class="btn" onclick="window.print()">打印 / PDF</button><button class="btn" onclick="archive()">归档，返回封面</button></div></section>${sources(E.sources.map(x=>x.id))}${footer()}`}
+function download(name,type,content){let url=URL.createObjectURL(new Blob([content],{type}));let a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function exportData(){download('经营者-V3-完整记录.json','application/json',JSON.stringify(db,null,2))}
+function downloadReport(){let r=db.active;let content=`<!doctype html><meta charset="utf-8"><title>千团大战 · 我的复盘</title><style>body{max-width:800px;margin:40px auto;padding:20px;font:17px/1.9 system-ui;color:#173039}article{border-top:1px solid #ccc;margin:25px 0;padding:20px 0}h1,h2{line-height:1.4}p{white-space:pre-wrap}</style><h1>千团大战 · 我的决策档案</h1><p>完成于 ${esc(r.completedAt||'未完成')}。此文件可离线阅读，无需任何会员。</p>`;r.decisions.forEach((d,k)=>{let s=E.scenes[k],o=s.options.find(x=>x.id===d.option);content+=`<article><h2>${s.eyebrow} · ${o.name}</h2><p>把握：${d.confidence}%</p><p>我的理由：${esc(d.reason)}</p><p>改变条件：${esc(d.stop)}</p><p>历史动作：${s.actual}</p><p>依据与解释：${s.why}</p><p>路线检验：${o.test}</p><p>我的修正：${esc(d.reflection||'未填写')}</p></article>`});content+=`<h2>唯一改进动作</h2><p>${esc(r.action||'未填写')}</p><h2>交给任意AI或教练</h2><p>请引用我的原话和案例证据，评价财务口径、证据边界、机会成本与停止条件。不得只因和历史选择相同加分，不根据选项推断我的心理。先指出已处理和未处理的风险，最后只留一个改进动作。我的把握不是可结算事件概率，不计算Brier分。</p><h2>资料</h2>`+E.sources.map(x=>`<p>[${x.id}] ${x.date} <a href="${x.url}">${x.title}</a></p>`).join('');download('STR-0001-我的复盘.html','text/html',content)}
+function archive(){db.runs.push({...db.active});db.active=null;save();home();top();notify('已归档，可在“我的档案”中重看。')}
+function modal(html){$('modal').innerHTML=html+'<div><button class="btn" onclick="$(\'modal\').close()">关闭</button></div>';$('modal').showModal()}
+function showAbout(){modal(`<h2>你的个人商学院</h2><p>本集可以直接在浏览器使用，无需ChatGPT会员、登录或AI接口。断网也可以使用已下载的完整HTML文件。</p><p class="note">当前浏览器保存进度；更换设备或清理浏览器前，请导出JSON备份。不会自动云同步。本地文件方式的存储能力取决于浏览器，请保留备份。</p><p class="note">历史、当事人主张与教学演绎分别标记。逐路线反馈不冒充自由文字评分。公开静态网页按界面封印剧情，但源代码不能阻止主动查看后续内容。</p><div class="actions"><button class="btn primary" onclick="downloadOffline()">下载离线完整单页 ↓</button><button class="btn" onclick="exportData()">导出记录 ↓</button></div>`)}
+function downloadOffline(){let clean=document.documentElement.cloneNode(true);clean.querySelector('#app').innerHTML='';clean.querySelector('#modal').innerHTML='';clean.querySelector('#modal').removeAttribute('open');clean.querySelector('#announce').innerHTML='';download('经营者-千团大战-V3.html','text/html','<!doctype html>'+clean.outerHTML)}
+function showRecords(){let old=false;try{old=!!localStorage.getItem('business-command-v2')}catch{}modal(`<h2>我的决策档案</h2><p class="small muted">当前设备 · ${db.runs.length} 份归档 · ${db.active?'1 局进行中':'没有进行中的对局'}</p>${db.runs.map((r,k)=>`<div class="history-card"><b>${esc(new Date(r.startedAt).toLocaleString('zh-CN'))}</b><p>${r.decisions.length}/3 幕 ${r.incomplete?'· 未完成归档':''}</p><button class="btn" onclick="loadRun(${k})">打开记录</button></div>`).join('')}<div class="actions"><button class="btn" onclick="exportData()">导出全部V3记录</button>${old?'<button class="btn" onclick="exportLegacy()">导出旧版V2记录</button>':''}</div><p class="note"><a href="archive-v2.html">打开旧版 V2（继续旧对局） ↗</a></p><p class="note">导入会合并历史，并优先保留当前进行中的对局；不会覆盖旧版V2记录。</p><label class="small" for="backup">恢复V3备份</label><input id="backup" type="file" accept=".json,application/json" onchange="importData(this.files[0])">`)}
+function loadRun(k){if(db.active){notify('先完成或归档当前对局，再打开旧记录。');return}db.active=JSON.parse(JSON.stringify(db.runs[k]));db.runs.splice(k,1);save();$('modal').close();render()}
+function exportLegacy(){let raw=localStorage.getItem('business-command-v2');download('经营者-旧版V2原始备份.json','application/json',raw)}
+async function importData(file){if(!file)return;try{if(file.size>5e6)throw Error('文件过大');let v=JSON.parse(await file.text());if(!validDB(v))throw Error('不是有效的V3记录');let ids=new Set([...db.runs.map(r=>r.id),db.active?.id]);for(let r of v.runs){if(!ids.has(r.id)){db.runs.push(r);ids.add(r.id)}}if(v.active&&!ids.has(v.active.id)){if(!db.active)db.active=v.active;else db.runs.push(v.active)}save();$('modal').close();render();notify('备份已合并，现有进度已保留。')}catch(e){notify('未导入：'+e.message)}}
 home();
-</script></html>
+</script></body></html>
