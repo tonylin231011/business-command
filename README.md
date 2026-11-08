@@ -6,6 +6,10 @@
 
 [开始体验](https://tonylin231011.github.io/business-command/) · [原课程与案例库](https://tonylin231011.github.io/business-command/library.html) · [贡献指南](CONTRIBUTING.md) · [内容说明](NOTICE.md)
 
+![经营者公开版首页](assets/cover.png)
+
+![NPC会面与证据笔记](assets/npc.png)
+
 ## 已经可以玩什么
 
 首集 **STR-0001《千团大战：下一笔钱》** 已具备三幕完整流程，约20分钟。
