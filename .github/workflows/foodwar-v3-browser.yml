@@ -1,0 +1,24 @@
+name: V3 browser quality gate
+on:
+  push:
+    paths: ['v3/**', '.github/workflows/foodwar-v3-browser.yml']
+  workflow_dispatch:
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - name: Serve local static project
+        run: python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/v3-http.log 2>&1 &
+      - run: node v3/browser-check.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: foodwar-v3-visual-check
+          path: v3/shot-*.png
+          if-no-files-found: ignore
