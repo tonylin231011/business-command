@@ -1,0 +1,19 @@
+name: Cinematic V3 smoke
+on:
+  push:
+    paths:
+      - 'v3/**'
+      - '.github/workflows/foodwar-v3.yml'
+  pull_request:
+    paths:
+      - 'v3/**'
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check v3/game.js
+      - run: node v3/smoke.cjs
