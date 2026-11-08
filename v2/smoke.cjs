@@ -25,7 +25,7 @@ for(let i=0;i<4;i++){
  assert.equal(run('state.phase'),'reveal');
  assert.equal(run('state.records.length'),i+1);
  assert.equal(run('state.records['+i+'].allocation.reduce((a,b)=>a+b,0)'),100);
- assert(app.innerHTML.includes('历史'));
+ assert(app.innerHTML.includes('史实'));
  run('advance()');
 }
 assert.equal(run('state.phase'),'report');
