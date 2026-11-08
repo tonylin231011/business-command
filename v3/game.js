@@ -132,7 +132,7 @@ function showEvidence(id){
  if(!S.read.includes(id))S.read.push(id);
  save();
  showModal('<div class="eyebrow">档案 '+item.number+' / '+item.subtitle+'</div><h2 id="modalTitle">'+item.title+'</h2><p>'+item.detail+'</p><div class="notice">标注：'+item.type+'。史料与推演不得混淆。</div><button class="button gold small" id="returnToInvest">返回会议室</button>');
- $('returnToInvest').addEventListener('click',()=>{closeModal();render()});
+ $('returnToInvest').addEventListener('click',()=>{closeModal();render();window.scrollTo(0,0)});
 }
 function showSources(){
  showModal('<div class="eyebrow">SOURCE FILE / 制作与事实边界</div><h2 id="modalTitle">我们知道什么？又不知道什么？</h2><p>本作品中的市场负责人、财务负责人、履约负责人及其对话，均为虚构教学角色。会议室、雨夜、方案、即时后果及各项模拟指标，不代表真实发生的公司内部事件。</p>'+SOURCES.map(s=>'<div class="source"><a target="_blank" rel="noopener noreferrer" href="'+s.url+'">'+s.title+' ↗</a><small>资料用于背景事实。观点与历史判断仍须独立核对。</small></div>').join('')+'<p class="notice">2018年交易的95亿美元是公告所称隐含企业价值，并非创始人个人收益；本作品有意不把无法核验的现金跑道、利润率或市场份额编造成事实。</p>');
