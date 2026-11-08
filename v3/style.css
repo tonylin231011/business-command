@@ -10,3 +10,40 @@
 @media(max-width:1050px){.showmark{display:none}.scene-bottom{grid-template-columns:1fr}.scene-meta{display:flex;gap:15px;flex-wrap:wrap}.scene-meta .info-title{border:0}.scene-meta .info-line{border:0;padding:0}.invest-layout{grid-template-columns:1fr}.intel{position:static}.invest-head{grid-template-columns:1fr}.invest-meta{border-left:0;border-top:1px solid #9e896660;padding:13px 0}.npc-stage{grid-template-columns:repeat(3,1fr)}.scene-head{margin-top:50px}}
 @media(max-width:700px){.topbar{height:61px}.brand-glyph{width:33px;height:33px;font-size:21px}.brand-name{font-size:16px}.brand-name small{font-size:7px;letter-spacing:1px}.btn-text{display:none}.icon-btn{padding:0 12px}.cold,.scene,.interactive,.decision,.ending{min-height:calc(100svh - 61px)}#app{min-height:calc(100svh - 61px)}.cold h1{font-size:clamp(47px,15vw,78px);letter-spacing:.06em}.cold .ribbon{gap:13px;flex-wrap:wrap}.cold .teaser{font-size:14px}.cold-inner{padding-bottom:60px}.scene-content{min-height:calc(100svh - 61px);padding:18px 16px 20px}.scene-top{flex-direction:column;gap:8px}.scene-head{margin-top:30px}.scene-head h1{font-size:clamp(33px,10vw,48px)}.scene-head .lede{font-size:14px}.scene-bottom{gap:10px;margin-top:12px}.dialogue-panel{padding:15px 16px;min-height:165px}.dialogue-text{font-size:15px;min-height:68px}.scene-meta{padding:10px}.scene-meta .info-line{font-size:11px}.interactive{padding:25px 15px 65px}.invest-head h1{font-size:34px}.npc-stage{grid-template-columns:1fr;gap:8px}.npc-card{min-height:initial;padding:12px 15px;display:grid;grid-template-columns:45px 1fr;column-gap:11px}.npc-initial{grid-row:1/4;width:38px;height:38px;margin:0}.npc-card h3{font-size:17px}.npc-card .stance{margin-top:4px}.dialogue-invest{padding:18px;min-height:initial}.evidence-grid,.decision-options,.ending-grid{grid-template-columns:1fr}.evidence-file{min-height:145px}.decision{padding:30px 15px 55px}.decision-options{gap:10px;margin:25px 0 18px}.decision-option{min-height:205px;padding:17px}.decision-option.chosen{padding:16px}.decision-option .alphabet{font-size:32px;margin:0 0 5px}.decision-option h2{font-size:20px;margin-bottom:7px}.decision-option p{font-size:13px}.decision-option .tradeoff{padding-top:10px}.ending-inner{padding:40px 17px 65px}.ending h1{font-size:40px}.ending .epilogue{font-size:17px}.ending-card{padding:20px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Visual QA refinements: let the illustrations breathe and prioritize legible dialogue. */
+.vignette{opacity:.16}
+.film-grain{opacity:.055}
+.cold-bg{filter:brightness(.88) saturate(.82)}
+.cold-wash{background:radial-gradient(circle at 50% 43%,#43322427,transparent 48%),linear-gradient(90deg,#030608ab,transparent 43%,#03060865)}
+.scene-bg{filter:brightness(.94)}
+.scene-bg.street{filter:brightness(.85)}
+.scene-bg.focus{filter:brightness(.76)}
+.interactive{background:linear-gradient(0deg,#080e11cf,#080f12c2),url('./art-room.svg') center/cover fixed}
+.decision{background:linear-gradient(#071013c9,#071013dc),url('./art-city.svg') center/cover fixed}
+.npc-card{background:linear-gradient(155deg,#243536f6,#142126fa);border-color:#c0a17575}
+.npc-card.selected{background:linear-gradient(145deg,#423725f2,#1c3135f3)}
+.npc-card .role,.npc-card .stance,.evidence-file p{color:#d0ccbd}
+.evidence-file{background:linear-gradient(135deg,#243236,#142023)}
+.dialogue-invest{background:#16272bf2}
+.dialogue-invest p,.intel p,.evidence-item{color:#e2d6c2}
+.intel{background:#172527ef}
+.invest-head .lead,.ending .afterword{color:#e9dfd0}
+.ending-bg{filter:brightness(.89) saturate(.88)}
+.ending-bg.ending-a{filter:brightness(.73) saturate(.83)}
+.ending-bg.ending-b{filter:brightness(.94) saturate(1.12)}
+.ending-bg.ending-c{filter:brightness(.84) sepia(.1)}
+.ending-card{background:#182529ee}
+.ending-card p{color:#e0d5bf}
+.skip{top:0;left:0;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+.skip:focus{clip-path:none;top:10px;left:10px}
+@media(max-width:700px){
+ .interactive{background:linear-gradient(0deg,#081116e4,#0c1b1fe0),url('./art-room.svg') center/cover fixed}
+ .invest-head h1{font-size:32px;color:#f8e5c0}
+ .invest-meta{color:#e4d4bc}
+ .npc-card{background:#243136ee}
+ .dialogue-invest{background:#1a2a2ef3}
+ .evidence-file{background:#233238f3}
+ .intel{background:#1b292dee}
+ .ending-card{background:#1d2b30f5}
+}
