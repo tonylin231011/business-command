@@ -1,0 +1,19 @@
+name: V2 Food War smoke
+on:
+  push:
+    paths:
+      - 'v2/**'
+      - '.github/workflows/foodwar-v2.yml'
+  pull_request:
+    paths:
+      - 'v2/**'
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check v2/game.js
+      - run: node v2/smoke.cjs
