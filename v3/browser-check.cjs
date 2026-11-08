@@ -19,7 +19,7 @@ const {chromium}=require('playwright');
    await page.locator('#returnToInvest').click();
    await page.locator('[data-file="logistics"]').click();
    await page.locator('#returnToInvest').click();
-   await page.screenshot({path:'v3/shot-'+viewport.width+'-investigate.png',fullPage:false});
+   const restored=await page.evaluate(()=>window.scrollY);if(restored>10)throw new Error('Dossier return failed to reset scroll: '+restored);await page.screenshot({path:'v3/shot-'+viewport.width+'-investigate.png',fullPage:false});
    await page.locator('#toDecision').click();
    await page.locator('[data-option="bridge"]').click();
    await page.locator('#commitBtn').click();
